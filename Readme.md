@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Maxim Krasnobaev](https://up.htmlacademy.ru/htmlcss/18/user/365579).
-* Наставник: [Иван Смирнов] (https://htmlacademy.ru/profile/id71777).
+* Наставник: [Viktoriia Kovalenko] (https://htmlacademy.ru/profile/id504929).
 
 ---
 
