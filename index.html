@@ -37,18 +37,20 @@
         </ul>
         <ul class="user-navigation">
           <li class="search">
-            <form action="/echo" method="post">
-              <input type="search" name="search">
-                <div class="buttons">
-                  <input type="submit" value="Что ищем?">
-                </div>
-            </form>
+            <div class="search">
+              <a href="#" class="search__link">search</a>
+               <form action="#" method="post">
+                 <input type="search" name="search">
+               </form>
+            </div>
           </li>
           <li class="login-link"><a href="#">Вход</a></li>
           <li><a class="basket-button" href="#">Корзина</a></li>
         </ul>
-        <p class="header-shedule">С 10 до 20, ежедневно</p>
-        <p class="header-phone">8 812 450-25-25</p>
+        <div class="header-info">
+          <p class="header-shedule">С 10 до 20, ежедневно</p>
+          <p class="header-phone">8 812 450-25-25</p>
+        </div>
       </nav>
     </header>
     <main>
@@ -96,11 +98,9 @@
           <h2 class="visually-hidden">Каталог сливочного мороженного</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <p class="catalog-item-image">
-                <a href="catalog-item.html">
-                  <img src="img/product-1.jpg" width="220" height="220" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                </a>
-              </p>
+              <a href="catalog-item.html">
+                <img src="img/product-1.jpg" width="220" height="220" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              </a>
               <p class="catalog-item-price">
                 <span class="price">310 &#8399</span>
                 <span>/кг</span>
@@ -114,11 +114,9 @@
               </h3>
             </li>
             <li class="catalog-item">
-              <p class="catalog-item-image">
-                <a href="catalog-item.html">
-                  <img src="img/product-1.jpg" width="220" height="220" alt="Сливочно-кофейное с кусочками шоколада">
-                </a>
-              </p>
+              <a href="catalog-item.html">
+                <img src="img/product-1.jpg" width="220" height="220" alt="Сливочно-кофейное с кусочками шоколада">
+              </a>
               <p class="catalog-item-price">
                 <span class="price">380 &#8399</span>
                 <span>/кг</span>
@@ -132,11 +130,9 @@
               </h3>
             </li>
             <li class="catalog-item">
-              <p class="catalog-item-image">
-                <a href="catalog-item.html">
+              <a href="catalog-item.html">
                   <img src="img/product-1.jpg" width="220" height="220" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                </a>
-              </p>
+              </a>
               <p class="catalog-item-price">
                 <span class="price">355 &#8399</span>
                 <span>/кг</span>
@@ -150,11 +146,9 @@
               </h3>
             </li>
             <li class="catalog-item">
-              <p class="catalog-item-image">
-                <a href="catalog-item.html">
-                  <img src="img/product-1.jpg" width="220" height="220" alt="Сливочное крем-брюле с карамельной подливкой">
-                </a>
-              </p>
+              <a href="catalog-item.html">
+                <img src="img/product-1.jpg" width="220" height="220" alt="Сливочное крем-брюле с карамельной подливкой">
+              </a>
               <p class="catalog-item-price">
                 <span class="price">415 &#8399</span>
                 <span>/кг</span>
@@ -167,13 +161,14 @@
                 <a class="item-button site-button" href="#">Быстрый просмотр</a>
               </h3>
             </li>
+          </ul>
         </section>
         <section class="main-lead">
           <article class="lead-text">
             <h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
             <ul class="lead-list">
               <li class="lead-list icon-icecream">
-                <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
               </li>
               <li class="lead-list icon-cow">
                 <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
@@ -192,9 +187,9 @@
 
             <h3>Новое в нашем блоге</h3>
             <a href="#">
-              <span>10 способов сервировки<br>
+              10 способов сервировки<br>
               фруктовых щербетов<br>
-              к столу</span>
+              к столу
             </a>
           </article>
           <article>
@@ -212,14 +207,14 @@
         </section>
         <!--Как сделать интерактивную карту, если я ее конечно разметил правильно)))?-->
         <section class="main-map">
-          <article class="main-address">
-            <p>Адрес главного офиса и<br>
-               офлайн магазина:</p>
-            <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+          <div class="main-address">
+            <p>Адрес главного офиса и</p>
+            <p>офлайн магазина:</p>
+            <p class="footer-contacts">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
             <p>Для заказов по телефону:</p>
-            <p><b>8 812 450-25-25</b></p>
+            <p class="footer-contacts">8 812 450-25-25</p>
             <p>(с 10 до 20 ежедневно)</p>
-          </article>
+          </div>
           <div class="feedback-form">
             <a class="site-button feedback-button" href="feedback.html">Форма обратной связи</a>
           </div>
@@ -242,18 +237,7 @@
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
-        <!--Или же такой вариант?-->
-          <table>
-            <tr>
-              <td class="heart"><a href="#">Для поставщиков</a></td>
-              <td><a href="#">Наши документы</a></td>
-           </tr>
-           <tr>
-              <td><a href="#">О производстве</a></td>
-              <td><a href="#">Экологические стандарты</a></td>
-           </tr>
-          </table>
-          -->
+
       </div>
 
       <p class="footer-copyright">
