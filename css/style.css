@@ -38,13 +38,13 @@ p .raspberries-promo, p .choсolade-promo {
 .raspberries-promo {
   width: 560px;
   height: 229px;
-  background: url("img\raspberries-logo-1.jpg") no-repeat;
+  background: url("../img/raspberries-logo-1.jpg") no-repeat;
 }
 
-.choсolade-promo {
+.chocolade-promo {
   width: 560px;
   height: 229px;
-  background: url("img\choco-logo.jpg") no-repeat;
+  background: url("../img/choco-logo.jpg") no-repeat;
 }
 
 h2 .lead-text {
@@ -54,6 +54,23 @@ h2 .lead-text {
 
 p .lead-list {
   font-size: 16px;
+}
+
+.main-lead {
+  width: 1146px;
+  height: 306px;
+  background: url("../img/wafer-background.jpg") no-repeat;
+}
+.main-blog-info {
+  width: 560px;
+  height: 220px;
+  background: url("../img/strawberry-background.jpg") no-repeat;
+}
+
+.email-subscription {
+  width: 560px;
+  height: 220px;
+  background: #f8f7f4;
 }
 
 h3 .main-blog-info {
@@ -88,6 +105,6 @@ p .main-address {
 
 .catalog-page-title {
   font-size: 35px;
-  font-style: bold;
+  font-weight: bold;
   line-height: 41px;
 }
