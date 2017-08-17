@@ -5,3 +5,89 @@ body {
   font-family: "Roboto", Tahoma, sans-serif;
   color: #ffffff;
 }
+
+.header-shedule {
+ font-size: 14px;
+ line-height: 16px;
+}
+
+.header-phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/*Главная страница*/
+
+.slide-title {
+  font-size: 60px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+h2 .raspberries-promo, h2 .choсolade-promo {
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+}
+
+p .raspberries-promo, p .choсolade-promo {
+  font-size: 18px;
+  color: #ffffff;
+}
+/*Что не так? не вставились фоны...*/
+.raspberries-promo {
+  width: 560px;
+  height: 229px;
+  background: url("img\raspberries-logo-1.jpg") no-repeat;
+}
+
+.choсolade-promo {
+  width: 560px;
+  height: 229px;
+  background: url("img\choco-logo.jpg") no-repeat;
+}
+
+h2 .lead-text {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+p .lead-list {
+  font-size: 16px;
+}
+
+h3 .main-blog-info {
+  font-size: 16px;
+  color: #323232;
+}
+
+a .main-blog-info {
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+}
+
+p .email-subscription {
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+p .main-address {
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+}
+
+.footer-contacts {
+  font-size: 18px;
+  line-height: 24px;
+  color: #323232;
+}
+
+/*Каталог*/
+
+.catalog-page-title {
+  font-size: 35px;
+  font-style: bold;
+  line-height: 41px;
+}
