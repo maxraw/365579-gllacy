@@ -3,7 +3,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-family: "Roboto", Tahoma, sans-serif;
-  color: #ffffff;
+  /*color: #ffffff;*/
 }
 
 .header-shedule {
@@ -34,7 +34,7 @@ p .raspberries-promo, p .choсolade-promo {
   font-size: 18px;
   color: #ffffff;
 }
-/*Что не так? не вставились фоны...*/
+
 .raspberries-promo {
   width: 560px;
   height: 229px;
