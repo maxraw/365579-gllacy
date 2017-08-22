@@ -1,9 +1,126 @@
 body {
-  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Tahoma, sans-serif;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Roboto", Tahoma, sans-serif;
-  /*color: #ffffff;*/
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: #ffbc9e;
+}
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+.site-navigation,
+.user-navigation,
+.sub-menu {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a,
+.sub-menu a {
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus,
+.sub-menu a:hover,
+.sub-menu a:focus {
+  color: #ffbc9e;#f8f7f4
+}
+
+/*.slider {
+  position: relative;
+}
+
+.slider input[type=radio] {
+  display: none;
+}
+
+.slider-inner {
+  overflow: hidden;
+}
+
+.slider-slides {
+  float: left;
+  width: 647px;
+  height: 584px;
+}
+
+.slider-controls {
+  text-align: left;
+  margin-top: auto;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #f8f7f4;
+}
+
+#btn-1:checked ~ .slider-slides .slide {
+    transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-slides .slide {
+    transform: translate(-450px);
+}
+
+#btn-3:checked ~ .slider-slides .slide {
+    transform: translate(-900px);
+}*/
+.slide-button {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  background-color: #ac1000;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slide-button:hover {
+  color: #ffffff;
+  background-color: #f58669;
+  box-shadow: 0px 2px 2px 1 rgba(172, 16, 0, 1);
+}
+
+.slide-button:active {
+  color: #ffffff;
+  background-color: #942718;
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+  
 }
 
 .header-shedule {
@@ -24,7 +141,14 @@ body {
   color: #ffffff;
 }
 
-h2 .raspberries-promo, h2 .choсolade-promo {
+.raspberries-promo, .choсolade-promo {
+  width: 560px;
+  height: 229px;
+  text-align: left;
+  border-radius: 15px;
+}
+
+.raspberries-promo h2, .choсolade-promo h2 {
   font-size: 35px;
   line-height: 41px;
   color: #ffffff;
