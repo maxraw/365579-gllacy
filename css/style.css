@@ -9,6 +9,10 @@ body {
   background-color: #849d8f;
 }
 
+.inner-page {
+  color: #ffffff;
+}
+
 a {
   color: #ffffff;
   text-decoration: underline;
@@ -19,22 +23,32 @@ a:active {
   color: #ffbc9e;
 }
 
-.main-navigation {
-  font-size: 16px;
-  line-height: 18px;
+.button {
+  font: inherit;
+  text-align: center;
   color: #ffffff;
-  background-color: #849d8f;
+  vertical-align: middle;
+  border: none;
 }
 
 .site-navigation,
 .user-navigation,
 .sub-menu {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.site-navigation li,
+.user-navigation li {
+  position: relative;
+  display: inline-block;
 }
 
 .site-navigation a,
 .user-navigation a,
 .sub-menu a {
+  display: block;
   color: #ffffff;
 }
 
@@ -44,8 +58,28 @@ a:active {
 .user-navigation a:focus,
 .sub-menu a:hover,
 .sub-menu a:focus {
-  color: #ffbc9e;#f8f7f4
+  color: #ffbc9e;
 }
+
+.site-navigation .sub-menu {
+  position: absolute;
+  display: none;
+  width: 143px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  list-style: none;
+  background-color: #f8f7f4;
+}
+
+.site-navigation > li:hover .sub-menu {
+  display: block;
+  background-color: #fbded7;
+}
+ .user-navigation a {
+   padding-left: 358px;
+ }
 
 /*.slider {
   position: relative;
@@ -99,28 +133,37 @@ a:active {
     transform: translate(-900px);
 }*/
 .slide-button {
+  width: 278px;
+  height: 63px;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-  background-color: #ac1000;
+  background-color: #ffffff;
   color: #ffffff;
   text-decoration: none;
+  background-image: linear-gradient(top, #e74a35, #f26843);
+  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  border: 1px solid #ac1000;
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .slide-button:hover {
   color: #ffffff;
-  background-color: #f58669;
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #ec6e5d, #f58669);
+  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
   box-shadow: 0px 2px 2px 1 rgba(172, 16, 0, 1);
 }
 
 .slide-button:active {
   color: #ffffff;
-  background-color: #942718;
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #e1613e, #d74531);
+  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
+  border: 1px solid #942718;
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-  
 }
 
 .header-shedule {
@@ -140,50 +183,101 @@ a:active {
   line-height: 60px;
   color: #ffffff;
 }
-
-.raspberries-promo, .choсolade-promo {
+/*Начало промо*/
+.promo-item {
   width: 560px;
   height: 229px;
-  text-align: left;
   border-radius: 15px;
-}
-
-.raspberries-promo h2, .choсolade-promo h2 {
-  font-size: 35px;
-  line-height: 41px;
-  color: #ffffff;
-}
-
-p .raspberries-promo, p .choсolade-promo {
-  font-size: 18px;
-  color: #ffffff;
+  display: inline-block;
 }
 
 .raspberries-promo {
+  margin-left: 27px;
   width: 560px;
   height: 229px;
   background: url("../img/raspberries-logo-1.jpg") no-repeat;
 }
 
 .chocolade-promo {
+  margin-left: 26px;
   width: 560px;
   height: 229px;
   background: url("../img/choco-logo.jpg") no-repeat;
 }
 
-h2 .lead-text {
+.promo-item h2 {
+  list-style: none;
+  width: 269px;
+  height: 32px;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.raspberries-promo h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.chocolade-promo h2 {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.promo-item p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.promo-button {
+  width: 165px;
+  height: 46px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 50px;
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #ca3824, #f26843);
+  background-image: -webkit-linear-gradient(top, #ca3824, #f26843);
+  box-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
+
+}
+
+.promo-button:hover {
+  color: #fefefe;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(top, #ec6e5d, #f58669);
+  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
+  box-shadow: 0 1px 2px #ac1000;
+}
+
+.promo-button:active {
+  color: #fceeec;
+  background-color: rgba(0, 0, 0, 0.07);
+  background-image: linear-gradient(top, #e1613e, #d74531);
+  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
+  box-shadow: inset 0 2px 2px #942718;
+}
+/*Конец промо*/
+
+.lead-text h2 {
   font-size: 24px;
   line-height: 30px;
 }
 
-p .lead-list {
+.lead-list p {
   font-size: 16px;
 }
 
 .main-lead {
   width: 1146px;
   height: 306px;
-  background: url("../img/wafer-background.jpg") no-repeat;
+  margin-left: 27px;
+  margin-right: 27px;
+  background: url("../img/wafer-background.jpg") repeat;
+  border-radius: 15px;
 }
 .main-blog-info {
   width: 560px;
@@ -197,26 +291,193 @@ p .lead-list {
   background: #f8f7f4;
 }
 
-h3 .main-blog-info {
+.main-blog-info h3 {
   font-size: 16px;
   color: #323232;
 }
 
-a .main-blog-info {
+.main-blog-info a {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
 }
 
-p .email-subscription {
+.email-subscription p {
   font-size: 16px;
   color: #5a5a5a;
 }
 
-p .main-address {
+.main-address p {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
+}
+
+.catalog-page-title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: #333333;
+}
+
+.breadcrumbs-current {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters ul {
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #323232;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item img {
+  border-radius: 50%;
+}
+/*Пытался сделать наведение, не получилось
+.catalog-item:hover  {
+  width: 293px;
+  height: 405px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-image: url(../img/icecream_orange.jpg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-color: #f8f7f4;
+  opacity: 0.2;
+}*/
+
+.catalog-item-price span {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item-price .price {
+  font-size: 45px;
+}
+
+.catalog-list .item-button {
+  width: 200px;
+  height: 44px;
+  box-shadow: 0 1px 2px #ac1000;
+  background-color: #e84d37;
+  background-image: linear-gradient(top, #e74a35, #f26843);
+  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  min-width: 25px;
+  height: 26px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+/*Наведение*/
+.pagination-item a:hover {
+  width: 25px;
+  height: 26px;
+  color: #ffffff;
+  background-color: #ffffff;
+  opacity: 0.2;
+}
+/*Нажатие и активное состояние*/
+.pagination-item a:focus,
+.pagination-item a:active {
+  width: 25px;
+  height: 26px;
+  color: #323232;
+  background-color: #ffffff;
+}
+/*Текущая страница*/
+.pagination-item-current a {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.pagination-item .pagination-prev {
+  margin-right: 10px;
+  text-indent: -1000px;
+  background-image: url("../img/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.pagination-item .pagination-next {
+  margin-left: 10px;
+  text-indent: -1000px;
+  background-image: url("../img/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -40px;
+}
+
+.pagination-item .disabled {
+    opacity: 0.3;
+}
+
+.footer-social {
+  text-align: left;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: #ffffff;
+}
+
+.benefits-link ul {
+  list-style: none;
 }
 
 .footer-contacts {
@@ -225,10 +486,10 @@ p .main-address {
   color: #323232;
 }
 
-/*Каталог*/
-
-.catalog-page-title {
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 41px;
+.footer-copyright {
+  text-align: center;
+  color: #fefefe;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
