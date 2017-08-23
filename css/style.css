@@ -41,8 +41,8 @@ a:active {
 
 .site-navigation li,
 .user-navigation li {
-  position: relative;
-  display: inline-block;
+  /*position: relative;*/
+  /*display: inline-block;*/
 }
 
 .site-navigation a,
@@ -66,7 +66,7 @@ a:active {
   display: none;
   width: 143px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 14px;
   font-weight: 700;
   color: #ffffff;
   list-style: none;
@@ -134,20 +134,17 @@ a:active {
 }*/
 .slide-button {
   width: 278px;
-
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  background-color: #ffffff;
-  color: #ffffff;
-  text-decoration: none;
-  text-align: center;
-  padding: 20px 0;
   background-image: linear-gradient(top, #e74a35, #f26843);
   background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+  border-radius: 50px;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 32px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  border: 1px solid #ac1000;
-  border-radius: 40px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
@@ -164,7 +161,6 @@ a:active {
   background-color: #ffffff;
   background-image: linear-gradient(top, #e1613e, #d74531);
   background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
-  border: 1px solid #942718;
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
@@ -188,7 +184,6 @@ a:active {
 /*Начало промо*/
 .promo-item {
   width: 560px;
-  height: 229px;
   border-radius: 15px;
   display: inline-block;
 }
@@ -196,21 +191,18 @@ a:active {
 .raspberries-promo {
   margin-left: 27px;
   width: 560px;
-  height: 229px;
   background: url("../img/raspberries-logo-1.jpg") no-repeat;
 }
 
 .chocolade-promo {
   margin-left: 26px;
   width: 560px;
-  height: 229px;
   background: url("../img/choco-logo.jpg") no-repeat;
 }
 
 .promo-item h2 {
   list-style: none;
   width: 269px;
-  height: 32px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -234,9 +226,10 @@ a:active {
 
 .promo-button {
   width: 165px;
-  height: 46px;
   display: block;
   font-size: 18px;
+  text-align: center;
+  text-decoration: none;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
@@ -276,7 +269,6 @@ a:active {
 
 .main-lead {
   width: 1146px;
-  height: 306px;
   margin-left: 27px;
   margin-right: 27px;
   background: url("../img/wafer-background.jpg") repeat;
@@ -284,13 +276,11 @@ a:active {
 }
 .main-blog-info {
   width: 560px;
-  height: 220px;
   background: url("../img/strawberry-background.jpg") no-repeat;
 }
 
 .email-subscription {
   width: 560px;
-  height: 220px;
   background: #f8f7f4;
 }
 
@@ -372,7 +362,6 @@ a:active {
 /*Пытался сделать наведение, не получилось
 .catalog-item:hover  {
   width: 293px;
-  height: 405px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   background-image: url(../img/icecream_orange.jpg);
@@ -396,7 +385,6 @@ a:active {
 
 .catalog-list .item-button {
   width: 200px;
-  height: 44px;
   box-shadow: 0 1px 2px #ac1000;
   background-color: #e84d37;
   background-image: linear-gradient(top, #e74a35, #f26843);
@@ -409,7 +397,6 @@ a:active {
 
 .pagination-item a {
   min-width: 25px;
-  height: 26px;
   line-height: 18px;
   text-align: center;
   vertical-align: middle;
@@ -421,7 +408,6 @@ a:active {
 /*Наведение*/
 .pagination-item a:hover {
   width: 25px;
-  height: 26px;
   color: #ffffff;
   background-color: rgba(255, 0, 0, 0.2);#ffffff;
   opacity: 0.2;
@@ -430,7 +416,6 @@ a:active {
 .pagination-item a:focus,
 .pagination-item a:active {
   width: 25px;
-  height: 26px;
   color: #323232;
   background-color: #ffffff;
 }
@@ -464,7 +449,7 @@ a:active {
 }
 
 .pagination-item .disabled {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .footer-social {
