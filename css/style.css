@@ -134,18 +134,20 @@ a:active {
 }*/
 .slide-button {
   width: 278px;
-  height: 63px;
+
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
   background-color: #ffffff;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+  padding: 20px 0;
   background-image: linear-gradient(top, #e74a35, #f26843);
   background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   border: 1px solid #ac1000;
-  border-radius: 100px;
+  border-radius: 40px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
@@ -233,6 +235,7 @@ a:active {
 .promo-button {
   width: 165px;
   height: 46px;
+  display: block;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -420,7 +423,7 @@ a:active {
   width: 25px;
   height: 26px;
   color: #ffffff;
-  background-color: #ffffff;
+  background-color: rgba(255, 0, 0, 0.2);#ffffff;
   opacity: 0.2;
 }
 /*Нажатие и активное состояние*/
