@@ -8,6 +8,10 @@ body {
   color: #ffffff;
   background-color: #849d8f;
 }
+.wrapper {
+  min-width: 860px;
+  max-width: 1146px;
+}
 
 .inner-page {
   color: #ffffff;
@@ -32,53 +36,100 @@ a:active {
 }
 
 .site-navigation,
-.user-navigation,
+.user-navigation {
+  list-style: none;
+  width: 349px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
 .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.site-navigation li,
+/*.site-navigation li,
 .user-navigation li {
-  /*position: relative;*/
-  /*display: inline-block;*/
-}
+  position: relative;
+  display: inline-block;
+}*/
 
 .site-navigation a,
 .user-navigation a,
 .sub-menu a {
-  display: block;
+  list-style: none;
+  text-decoration: none;
   color: #ffffff;
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus,
 .user-navigation a:hover,
-.user-navigation a:focus,
-.sub-menu a:hover,
-.sub-menu a:focus {
-  color: #ffbc9e;
+.user-navigation a:focus {
+  width: 87px;
+  color: #333333;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: #f7f6f3;
+  border-radius: 60px;
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+  background-color: rgba(248, 247, 244, 0.99);
 }
 
 .site-navigation .sub-menu {
+  list-style: none;
   position: absolute;
   display: none;
   width: 143px;
-  font-size: 16px;
-  line-height: 14px;
-  font-weight: 700;
-  color: #ffffff;
-  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px 5px 5px 4px;
   background-color: #f8f7f4;
 }
 
 .site-navigation > li:hover .sub-menu {
   display: block;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.sub-menu li:hover {
   background-color: #fbded7;
 }
+
+.sub-menu li:active {
+  background-color: #f6b5a5;
+}
+
  .user-navigation a {
-   padding-left: 358px;
+   min-width: 32px;
+   max-width: 117px;
+   color: #ffffff;
+   text-align: center;
+   padding: 20px 0;
+   display: block;
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 16px;
+   border-radius: 60px;
+   background-color: rgba(255, 255, 255, 0.2);
  }
 
 /*.slider {
@@ -189,20 +240,18 @@ a:active {
 }
 
 .raspberries-promo {
-  margin-left: 27px;
   width: 560px;
   background: url("../img/raspberries-logo-1.jpg") no-repeat;
 }
 
 .chocolade-promo {
-  margin-left: 26px;
   width: 560px;
   background: url("../img/choco-logo.jpg") no-repeat;
 }
 
 .promo-item h2 {
   list-style: none;
-  width: 269px;
+  max-width: 269px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -257,42 +306,68 @@ a:active {
   box-shadow: inset 0 2px 2px #942718;
 }
 /*Конец промо*/
+/*Начало лида*/
+.main-lead {
+  color: #323232;
+  background-image: url("../img/wafer-background.jpg");
+  background-repeat: repeat;
+  border-radius: 15px;
+}
 
 .lead-text h2 {
+  list-style: none;
+  color: #323232;
   font-size: 24px;
+  font-weight: 500;
   line-height: 30px;
 }
 
 .lead-list p {
+  list-style: none;
+  color: #323232;
   font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+/*Конец лида*/
+
+.main-info {
+  display: inline-block;
+  width: 560px;
+
 }
 
-.main-lead {
-  width: 1146px;
-  margin-left: 27px;
-  margin-right: 27px;
-  background: url("../img/wafer-background.jpg") repeat;
-  border-radius: 15px;
-}
 .main-blog-info {
+  border-radius: 15px;
   width: 560px;
-  background: url("../img/strawberry-background.jpg") no-repeat;
-}
-
-.email-subscription {
-  width: 560px;
-  background: #f8f7f4;
+  height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
+  background-image: url("../img/strawberry-background.jpg");
+  background-repeat: no-repeat;
 }
 
 .main-blog-info h3 {
+  list-style: none;
   font-size: 16px;
   color: #323232;
 }
 
 .main-blog-info a {
+  list-style: none;
+  color: #323232;
   font-size: 24px;
+  font-weight: 700;
   line-height: 30px;
   color: #323232;
+}
+/*Не могу понять вроде бы все правильно, но как нормально перекрыть фон и задать размер блока?*/
+.email-subscription {
+  width: 560px;
+  height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
+  border-radius: 9px;
+  background-image: url("../img/background-subscription-white.png"),
+  url("../img/border-image-subscription.png");
+  background-size: 549px, cover;
+
 }
 
 .email-subscription p {
@@ -300,12 +375,44 @@ a:active {
   color: #5a5a5a;
 }
 
+.email-subscription-button {
+  width: 278px;
+  background-image: linear-gradient(top, #e74a35, #f26843);
+  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+  border-radius: 50px;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 32px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.email-subscription-button:hover {
+  color: #ffffff;
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #ec6e5d, #f58669);
+  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
+  box-shadow: 0px 2px 2px 1 rgba(172, 16, 0, 1);
+}
+
+.email-subscription-button:active {
+  color: #ffffff;
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #e1613e, #d74531);
+  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
 .main-address p {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
 }
-
+/*Каталог*/
 .catalog-page-title {
   font-size: 35px;
   font-weight: 700;
@@ -359,17 +466,21 @@ a:active {
 .catalog-item img {
   border-radius: 50%;
 }
-/*Пытался сделать наведение, не получилось
+
+.catalog-item {
+  min-width: 200px;
+  max-width: 267px;
+}
+
 .catalog-item:hover  {
-  width: 293px;
+  min-width: 220px;
+  max-width: 293px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  background-image: url(../img/icecream_orange.jpg);
   background-repeat: no-repeat;
   background-size: 60%;
-  background-color: #f8f7f4;
-  opacity: 0.2;
-}*/
+  background-color: rgba(248, 247, 244, 0.2);
+}
 
 .catalog-item-price span {
   font-size: 30px;
@@ -452,20 +563,29 @@ a:active {
   opacity: 0.3;
 }
 
-.footer-social {
-  text-align: left;
-}
-
 .footer-social ul {
   list-style: none;
+
 }
 
 .social-button {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.social-button:hover {
   color: #ffffff;
+}
+
+.social-button:active {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .benefits-link ul {
   list-style: none;
+}
+
+.heart::before {
+  content: url("../img/heart.svg");
 }
 
 .footer-contacts {
@@ -480,4 +600,5 @@ a:active {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+  background-image: url("../img/htmlacademy.svg");/*не отображается =(*/
 }
