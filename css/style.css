@@ -1,4 +1,10 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
+  min-width: 900px;
+  max-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Tahoma, sans-serif;
@@ -35,8 +41,40 @@ a:active {
   border: none;
 }
 
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  display: flex;
+  float: left;
+
+}
+
+.site-navigation li {
+  margin-left: 24px;
+}
+
+.user-navigation {
+  display: flex;
+  float: right;
+}
+
+.user-navigation li {
+  margin-left: 10px;
+}
+
+.header-info {
+  position: absolute;
+  top: 75px;
+  left: 981px;
+}
+
 .site-navigation,
 .user-navigation {
+
   list-style: none;
   width: 349px;
   color: #ffffff;
@@ -242,11 +280,13 @@ a:active {
 
 .raspberries-promo {
   width: 560px;
+  min-height: 229px;
   background: url("../img/raspberries-logo-1.jpg") no-repeat;
 }
 
 .chocolade-promo {
   width: 560px;
+  min-height: 229px;
   background: url("../img/choco-logo.jpg") no-repeat;
 }
 
@@ -309,6 +349,8 @@ a:active {
 /*Конец промо*/
 /*Начало лида*/
 .main-lead {
+  width: 1146px;
+  min-height: 306px;
   color: #323232;
   background-image: url("../img/wafer-background.jpg");
   background-repeat: repeat;
@@ -341,7 +383,7 @@ a:active {
 .main-blog-info {
   border-radius: 15px;
   width: 560px;
-  height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
+  min-height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
   background-image: url("../img/strawberry-background.jpg");
   background-repeat: no-repeat;
 }
@@ -363,7 +405,7 @@ a:active {
 /*Не могу понять вроде бы все правильно, но как нормально перекрыть фон и задать размер блока?*/
 .email-subscription {
   width: 560px;
-  height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
+  min-height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
   border-radius: 9px;
   background-image: url("../img/background-subscription-white.png"),
   url("../img/border-image-subscription.png");
@@ -569,21 +611,14 @@ a:active {
 
 }
 
-.social-button {
-  color: rgba(255, 255, 255, 0.8);
+/*.footer-social .button-tw {
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
+  background-position: top;
+  background-size: 32px 32px;
 }
 
-.footer-social .social-button:hover {
-  color: #ffffff;
-}
-
-.footer-social .social-button:active {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/*.footer-social .social-button {
+.footer-social .social-button {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -593,7 +628,7 @@ a:active {
 
 .footer-social .social-button:active {
   color: rgba(255, 255, 255, 0.7);
-}
+}*/
 
 .benefits-link ul {
   list-style: none;
