@@ -33,33 +33,61 @@ a:active {
   color: #ffbc9e;
 }
 
-.button {
-  font: inherit;
-  text-align: center;
-  color: #ffffff;
+.site-button {
   vertical-align: middle;
-  border: none;
+  background-image: linear-gradient(top, #e74a35, #f26843);
+  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.site-button:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #ec6e5d, #f58669);
+  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
+  box-shadow: 0 2px 2px #ac1000;
+}
+
+.site-button:active {
+  color: #fceeec;
+  background-color: rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  background-image: linear-gradient(top, #e1613e, #d74531);
+  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
+  box-shadow: inset 0 2px 2px #942718;
 }
 
 .main-navigation {
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .site-navigation {
   display: flex;
-  float: left;
-
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .site-navigation li {
+  list-style: none;
   margin-left: 24px;
 }
 
 .user-navigation {
   display: flex;
-  float: right;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  flex-grow: 2;
 }
 
 .user-navigation li {
@@ -72,51 +100,71 @@ a:active {
   left: 981px;
 }
 
-.site-navigation,
-.user-navigation {
-
-  list-style: none;
-  width: 349px;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-}
-
 .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/*.site-navigation li,
-.user-navigation li {
-  position: relative;
-  display: inline-block;
-}*/
 
-.site-navigation a,
-.user-navigation a,
-.sub-menu a {
+.site-navigation,
+.user-navigation {
+  display: flex;
+}
+
+.site-navigation li,
+.user-navigation li {
+
   list-style: none;
-  text-decoration: none;
   color: #ffffff;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  width: 87px;
-  color: #333333;
+.site-navigation a {
+  display: block;
+  list-style: none;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 32px 15px;
+}
+
+.user-navigation a {
+  min-width: 32px;
+  max-width: 117px;
+  color: #ffffff;
   text-align: center;
   padding: 20px 0;
   display: block;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #333333;
   background-color: #f7f6f3;
-  border-radius: 60px;
+  border-radius: 30px;
+}
+
+.user-navigation .search {
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+}
+
+.user-navigation .login-link::before {
+  background-image: url("../img/entrance.svg");
+  background-repeat: no-repeat;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #000000;
+  background-color: #f8f7f4;
+  border-radius: 30px;
 }
 
 .site-navigation a:active,
@@ -130,7 +178,6 @@ a:active {
   list-style: none;
   position: absolute;
   display: none;
-  width: 143px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -140,36 +187,26 @@ a:active {
   background-color: #f8f7f4;
 }
 
+.sub-menu a {
+  text-decoration: none;
+}
+
 .site-navigation > li:hover .sub-menu {
   display: block;
-  width: 143px;
   color: #323232;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.sub-menu li:hover {
+.sub-menu a:hover {
+  width: 143px;
   background-color: #fbded7;
 }
 
-.sub-menu li:active {
+.sub-menu a:active {
   background-color: #f6b5a5;
 }
-
- .user-navigation a {
-   min-width: 32px;
-   max-width: 117px;
-   color: #ffffff;
-   text-align: center;
-   padding: 20px 0;
-   display: block;
-   font-size: 14px;
-   font-weight: 500;
-   line-height: 16px;
-   border-radius: 60px;
-   background-color: rgba(255, 255, 255, 0.2);
- }
 
 /*.slider {
   position: relative;
@@ -222,36 +259,38 @@ a:active {
 #btn-3:checked ~ .slider-slides .slide {
     transform: translate(-900px);
 }*/
+
+.slider-slides .slide-1 {
+  background-image: url("../img/group-icecream1-slider.png");
+  background-size: 851px auto;
+  background-repeat: no-repeat;
+}
+
+.slider-slides .slide-2 {
+  background-image: url("../img/group-icecream2-slider.png");
+  background-size: 851px auto;
+  background-repeat: no-repeat;
+}
+
+.slider-slides .slide-3 {
+  background-image: url("../img/group-icecream3-slider.png");
+  background-size: 851px auto;
+  background-repeat: no-repeat;
+}
+
 .slide-button {
   width: 278px;
-  background-image: linear-gradient(top, #e74a35, #f26843);
-  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
-  border-radius: 50px;
-  text-align: center;
-  padding: 20px 0;
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
   font-weight: 700;
   font-size: 32px;
+  line-height: 44px;
+  border-radius: 50px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-.slide-button:hover {
+.slide-title {
+  font-size: 60px;
+  line-height: 60px;
   color: #ffffff;
-  background-color: #ffffff;
-  background-image: linear-gradient(top, #ec6e5d, #f58669);
-  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
-  box-shadow: 0px 2px 2px 1 rgba(172, 16, 0, 1);
-}
-
-.slide-button:active {
-  color: #ffffff;
-  background-color: #ffffff;
-  background-image: linear-gradient(top, #e1613e, #d74531);
-  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .header-shedule {
@@ -266,11 +305,7 @@ a:active {
 
 /*Главная страница*/
 
-.slide-title {
-  font-size: 60px;
-  line-height: 60px;
-  color: #ffffff;
-}
+
 /*Начало промо*/
 .promo-item {
   width: 560px;
@@ -316,36 +351,13 @@ a:active {
 
 .promo-button {
   width: 165px;
-  display: block;
   font-size: 18px;
-  text-align: center;
-  text-decoration: none;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
   border-radius: 50px;
-  background-color: #ffffff;
-  background-image: linear-gradient(top, #ca3824, #f26843);
-  background-image: -webkit-linear-gradient(top, #ca3824, #f26843);
-  box-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
-
 }
 
-.promo-button:hover {
-  color: #fefefe;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-image: linear-gradient(top, #ec6e5d, #f58669);
-  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
-  box-shadow: 0 1px 2px #ac1000;
-}
-
-.promo-button:active {
-  color: #fceeec;
-  background-color: rgba(0, 0, 0, 0.07);
-  background-image: linear-gradient(top, #e1613e, #d74531);
-  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
-  box-shadow: inset 0 2px 2px #942718;
-}
 /*Конец промо*/
 /*Начало лида*/
 .main-lead {
@@ -419,35 +431,13 @@ a:active {
 }
 
 .email-subscription-button {
-  width: 278px;
-  background-image: linear-gradient(top, #e74a35, #f26843);
-  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+  color: #fefefe;
+  width: 129px;
   border-radius: 50px;
-  text-align: center;
-  padding: 20px 0;
-  display: block;
-  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
-  font-size: 32px;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-}
-
-.email-subscription-button:hover {
-  color: #ffffff;
-  background-color: #ffffff;
-  background-image: linear-gradient(top, #ec6e5d, #f58669);
-  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
-  box-shadow: 0px 2px 2px 1 rgba(172, 16, 0, 1);
-}
-
-.email-subscription-button:active {
-  color: #ffffff;
-  background-color: #ffffff;
-  background-image: linear-gradient(top, #e1613e, #d74531);
-  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .main-address p {
@@ -538,7 +528,12 @@ a:active {
 }
 
 .catalog-list .item-button {
+  color: #fefefe;
   width: 200px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  border-radius: 50px;
   box-shadow: 0 1px 2px #ac1000;
   background-color: #e84d37;
   background-image: linear-gradient(top, #e74a35, #f26843);
@@ -563,7 +558,7 @@ a:active {
 .pagination-item a:hover {
   width: 25px;
   color: #ffffff;
-  background-color: rgba(255, 0, 0, 0.2);#ffffff;
+  background-color: rgba(255, 0, 0, 0.2);
   opacity: 0.2;
 }
 /*Нажатие и активное состояние*/
@@ -611,13 +606,13 @@ a:active {
 
 }
 
-/*.footer-social .button-tw {
+.footer-social .button-tw::before {
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: 32px 32px;
 }
-
+/*
 .footer-social .social-button {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -650,5 +645,6 @@ a:active {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  background-image: url("../img/htmlacademy.svg");/*не отображается =(*/
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
 }
