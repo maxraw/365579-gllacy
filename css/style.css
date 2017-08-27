@@ -3,8 +3,6 @@
 }
 
 body {
-  min-width: 900px;
-  max-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Tahoma, sans-serif;
@@ -17,6 +15,7 @@ body {
 .wrapper {
   min-width: 860px;
   max-width: 1146px;
+  margin: auto;
 }
 
 .inner-page {
@@ -65,7 +64,8 @@ a:active {
 }
 
 .main-navigation {
-
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -94,7 +94,8 @@ a:active {
 }
 
 .header-info {
-  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
   top: 75px;
   left: 981px;
 }
@@ -111,22 +112,30 @@ a:active {
   display: flex;
 }
 
+.site-navigation ul,
+.user-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .site-navigation li,
 .user-navigation li {
-
   list-style: none;
   color: #ffffff;
+  margin-left: 10px;
 }
 
 .site-navigation a {
   display: block;
   list-style: none;
   text-decoration: underline;
+  text-align: center;
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  padding: 32px 15px;
+  padding: 7px 15px;
 }
 
 .user-navigation a {
@@ -153,6 +162,7 @@ a:active {
 .user-navigation .search::before {
   background-image: url("../img/loupe.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .user-navigation .login-link::before {
@@ -178,17 +188,19 @@ a:active {
   list-style: none;
   position: absolute;
   display: none;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400;
-  color: #323232;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  width: 143px;
   border-radius: 4px 5px 5px 4px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
 
 .sub-menu a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
   text-decoration: none;
+  color: #323232;
+
 }
 
 .site-navigation > li:hover .sub-menu {
@@ -197,15 +209,25 @@ a:active {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+
 }
 
 .sub-menu a:hover {
   width: 100%;
   background-color: #fbded7;
+  border-radius: 0;
 }
 
 .sub-menu a:active {
   background-color: #f6b5a5;
+}
+
+.sub-menu .new-item {
+  color: #323232;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
 /*.slider {
@@ -307,6 +329,11 @@ a:active {
 
 
 /*Начало промо*/
+.main-promo {
+  display: flex;
+  justify-content: space-between;
+}
+
 .promo-item {
   width: 560px;
   border-radius: 15px;
@@ -349,7 +376,7 @@ a:active {
   color: #ffffff;
 }
 
-.promo-button {
+.promo-item .promo-button {
   width: 165px;
   font-size: 18px;
   line-height: 24px;
@@ -387,15 +414,13 @@ a:active {
 /*Конец лида*/
 
 .main-info {
-  display: inline-block;
-  width: 560px;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-blog-info {
   border-radius: 15px;
   width: 560px;
-  min-height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
   background-image: url("../img/strawberry-background.jpg");
   background-repeat: no-repeat;
 }
@@ -417,7 +442,7 @@ a:active {
 /*Не могу понять вроде бы все правильно, но как нормально перекрыть фон и задать размер блока?*/
 .email-subscription {
   width: 560px;
-  min-height: 220px; /*По другому никак не смог задать высоту блоков...почему?*/
+
   border-radius: 9px;
   background-image: url("../img/background-subscription-white.png"),
   url("../img/border-image-subscription.png");
@@ -440,12 +465,38 @@ a:active {
   line-height: 24px;
 }
 
+.main-map {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+}
+
 .main-address p {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
 }
+
+.feedback-button {
+  color: #fefefe;
+  width: 252px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
 /*Каталог*/
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .catalog-page-title {
   font-size: 35px;
   font-weight: 700;
@@ -601,7 +652,20 @@ a:active {
   opacity: 0.3;
 }
 
+/*footer*/
+
+.main-footer {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.footer-social {
+
+}
+
 .footer-social ul {
+  width: 179px;
   list-style: none;
 
 }
@@ -609,7 +673,7 @@ a:active {
 .footer-social .button-tw::before {
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: 32px 32px;
 }
 /*
@@ -625,7 +689,13 @@ a:active {
   color: rgba(255, 255, 255, 0.7);
 }*/
 
+.benefits-link {
+  margin: 0;
+  padding: 0;
+}
+
 .benefits-link ul {
+  width: 326px;
   list-style: none;
 }
 
@@ -647,4 +717,8 @@ a:active {
   line-height: 18px;
   background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
+}
+
+.footer-copyright a {
+
 }
