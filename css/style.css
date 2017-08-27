@@ -80,7 +80,6 @@ a:active {
 
 .site-navigation li {
   list-style: none;
-  margin-left: 24px;
 }
 
 .user-navigation {
@@ -141,6 +140,7 @@ a:active {
   font-weight: 500;
   line-height: 16px;
   background-color: rgba(255, 255, 255, 0.2);
+  text-indent: -9999px;
 }
 
 .site-navigation a:hover,
@@ -150,7 +150,7 @@ a:active {
   border-radius: 30px;
 }
 
-.user-navigation .search {
+.user-navigation .search::before {
   background-image: url("../img/loupe.svg");
   background-repeat: no-repeat;
 }
@@ -200,7 +200,7 @@ a:active {
 }
 
 .sub-menu a:hover {
-  width: 143px;
+  width: 100%;
   background-color: #fbded7;
 }
 
@@ -260,13 +260,13 @@ a:active {
     transform: translate(-900px);
 }*/
 
-.slider-slides .slide-1 {
+.container {
   background-image: url("../img/group-icecream1-slider.png");
-  background-size: 851px auto;
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
-.slider-slides .slide-2 {
+/*.slider-slides .slide-2 {
   background-image: url("../img/group-icecream2-slider.png");
   background-size: 851px auto;
   background-repeat: no-repeat;
@@ -276,7 +276,7 @@ a:active {
   background-image: url("../img/group-icecream3-slider.png");
   background-size: 851px auto;
   background-repeat: no-repeat;
-}
+}*/
 
 .slide-button {
   width: 278px;
