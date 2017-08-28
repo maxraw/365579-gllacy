@@ -18,6 +18,12 @@ body {
   margin: auto;
 }
 
+.container {
+  background-image: url("../img/group-icecream1-slider.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
 .inner-page {
   color: #ffffff;
 }
@@ -84,9 +90,10 @@ a:active {
 
 .user-navigation {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: flex-end;
   flex-grow: 2;
+  margin-right: 10px;
 }
 
 .user-navigation li {
@@ -95,21 +102,17 @@ a:active {
 
 .header-info {
   display: flex;
-  flex-direction: row-reverse;
-  top: 75px;
-  left: 981px;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  top: 20px;
 }
 
 .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-
-.site-navigation,
-.user-navigation {
-  display: flex;
 }
 
 .site-navigation ul,
@@ -159,15 +162,16 @@ a:active {
   border-radius: 30px;
 }
 
-.user-navigation .search::before {
-  background-image: url("../img/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.user-navigation .search a {
+  content: url("../img/loupe.svg");
 }
 
-.user-navigation .login-link::before {
-  background-image: url("../img/entrance.svg");
-  background-repeat: no-repeat;
+.user-navigation .enter-button a {
+  content: url("../img/entrance.svg");
+}
+
+.user-navigation .basket a::before {
+  content: url("../img/basket.svg");
 }
 
 .user-navigation a:hover,
@@ -282,12 +286,6 @@ a:active {
     transform: translate(-900px);
 }*/
 
-.container {
-  background-image: url("../img/group-icecream1-slider.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
 /*.slider-slides .slide-2 {
   background-image: url("../img/group-icecream2-slider.png");
   background-size: 851px auto;
@@ -332,27 +330,32 @@ a:active {
 .main-promo {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
 }
 
 .promo-item {
   width: 560px;
   border-radius: 15px;
-  display: inline-block;
 }
 
 .raspberries-promo {
-  width: 560px;
-  min-height: 229px;
+
+
   background: url("../img/raspberries-logo-1.jpg") no-repeat;
+  background-size: 100%;
 }
 
 .chocolade-promo {
-  width: 560px;
-  min-height: 229px;
+
   background: url("../img/choco-logo.jpg") no-repeat;
+  background-size: 100%;
 }
 
 .promo-item h2 {
+  padding-top: 0px;
+  padding-left: 20px;
   list-style: none;
   max-width: 269px;
   font-size: 35px;
@@ -372,11 +375,16 @@ a:active {
 }
 
 .promo-item p {
+  padding-left: 20px;
+  padding-right: 30px;
   font-size: 18px;
   color: #ffffff;
 }
 
 .promo-item .promo-button {
+  position: relative;
+  bottom: -45px;
+  left: 354px;
   width: 165px;
   font-size: 18px;
   line-height: 24px;
@@ -388,12 +396,37 @@ a:active {
 /*Конец промо*/
 /*Начало лида*/
 .main-lead {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  padding-left: 21px;
   width: 1146px;
   min-height: 306px;
   color: #323232;
   background-image: url("../img/wafer-background.jpg");
   background-repeat: repeat;
   border-radius: 15px;
+}
+
+.main-lead .lead-list {
+  list-style: none;
+}
+
+.lead-list .icon-icecream::before {
+  content: url("../img/ice-cream.svg");
+}
+
+.lead-list .icon-cow::before {
+  content: url("../img/cow.svg");
+}
+
+.lead-list .icon-leaflet::before {
+  content: url("../img/eco.svg");
+}
+
+.lead-list .icon-thermometer::before {
+  content: url("../img/thermometer.svg");
 }
 
 .lead-text h2 {
@@ -416,6 +449,7 @@ a:active {
 .main-info {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 .main-blog-info {
@@ -427,12 +461,15 @@ a:active {
 
 .main-blog-info h3 {
   list-style: none;
+  padding-left: 20px;
   font-size: 16px;
   color: #323232;
+
 }
 
 .main-blog-info a {
   list-style: none;
+  padding-left: 20px;
   color: #323232;
   font-size: 24px;
   font-weight: 700;
@@ -442,7 +479,6 @@ a:active {
 /*Не могу понять вроде бы все правильно, но как нормально перекрыть фон и задать размер блока?*/
 .email-subscription {
   width: 560px;
-
   border-radius: 9px;
   background-image: url("../img/background-subscription-white.png"),
   url("../img/border-image-subscription.png");
@@ -451,8 +487,11 @@ a:active {
 }
 
 .email-subscription p {
+  padding-left: 27px;
+  padding-right: 27px;
   font-size: 16px;
   color: #5a5a5a;
+  
 }
 
 .email-subscription-button {
@@ -489,12 +528,21 @@ a:active {
   line-height: 24px;
 }
 /*Каталог*/
+.catalog {
+  margin-top: 40px;
+}
+
 .catalog-list {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.catalog-item-price .price::after {
+  content: url("../img/ruble.svg");
 }
 
 .catalog-page-title {
