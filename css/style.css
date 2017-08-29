@@ -23,12 +23,13 @@ body > input[type="radio"] {
   background-image: url("../img/group-icecream1-slider.png");
   background-repeat: no-repeat;
   background-position: top center;
+  transition: background-image 0.5s ease,
+    background-color 0.5s ease;
 }
 
 .content-wrapper {
   min-width: 860px;
-  max-width: 1146px;
-  /*В демо ширина 900px если ставлю такую как в демо то все слетает*/
+  max-width: 1146px; /*В демо ширина 900px если ставлю такую как в демо то все слетает*/
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -65,10 +66,10 @@ a:active {
 
 .site-button {
   vertical-align: middle;
+  background-color: #f26843;
   background-image: linear-gradient(top, #e74a35, #f26843);
   background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
   text-align: center;
-  padding: 20px 0;
   display: block;
   color: #ffffff;
   text-decoration: none;
@@ -78,8 +79,7 @@ a:active {
 
 .site-button:hover {
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-color: #ffffff;
+  background-color: #f58669;
   background-image: linear-gradient(top, #ec6e5d, #f58669);
   background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
   box-shadow: 0 2px 2px #ac1000;
@@ -87,8 +87,7 @@ a:active {
 
 .site-button:active {
   color: #fceeec;
-  background-color: rgba(0, 0, 0, 0.07);
-  background-color: #ffffff;
+  background-color: #d74531;
   background-image: linear-gradient(top, #e1613e, #d74531);
   background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
   box-shadow: inset 0 2px 2px #942718;
@@ -133,7 +132,7 @@ a:active {
 
 .header-info {
   position: absolute;
-  left: 930px;
+  left: 980px;
   top: 75px;
 }
 
@@ -181,7 +180,6 @@ a:active {
   padding-left: 16px;
   padding-top: 10px;
   padding-right: 16px;
-
 }
 
 .user-navigation a {
@@ -334,7 +332,7 @@ a:active {
 
 .slide-button {
   display: inline-block;
-  padding: 12px 50px;
+  padding: 16px 42px 16px 40px;
   font-weight: 600;
   font-size: 31px;
   line-height: 41px;
@@ -378,17 +376,17 @@ a:active {
 
 #btn-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("../img/group-icecream1-slider.jpg");
+  background-image: url("../img/group-icecream1-slider.png");
 }
 
 #btn-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("../img/group-icecream2-slider.jpg");
+  background-image: url("../img/group-icecream2-slider.png");
 }
 
 #btn-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("../img/group-icecream3-slider.jpg");
+  background-image: url("../img/group-icecream3-slider.png");
 }
 
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
@@ -400,8 +398,6 @@ a:active {
 
 
 /*Главная страница*/
-
-
 /*Начало промо*/
 .main-promo {
   display: flex;
@@ -412,6 +408,7 @@ a:active {
 }
 
 .promo-item {
+  margin-top: 47px;
   width: 560px;
   border-radius: 15px;
 }
@@ -419,13 +416,13 @@ a:active {
 .raspberries-promo {
 
 
-  background: url("../img/raspberries-logo-1.jpg") no-repeat;
+  background: url("../img/raspberries-logo-1.png") no-repeat;
   background-size: 100%;
 }
 
 .chocolade-promo {
 
-  background: url("../img/choco-logo.jpg") no-repeat;
+  background: url("../img/choco-logo.png") no-repeat;
   background-size: 100%;
 }
 
@@ -451,14 +448,28 @@ a:active {
 }
 
 .promo-item p {
+  padding-top: 0px;
   padding-left: 20px;
   padding-right: 30px;
+  padding-bottom: 14px;
   font-size: 18px;
   color: #ffffff;
 }
 
-.promo-item .promo-button {
-  width: 165px;
+.promo-button {
+  /*width: 165px;*/
+  padding: 15px 24px 14px 22px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 50px;
+  float: right;
+}
+
+.promo-button-choco {
+  /*width: 189px;*/
+  padding: 14px 21px 14px 22px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -487,6 +498,8 @@ a:active {
 }
 
 .main-lead ul  {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -500,8 +513,10 @@ a:active {
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
-  float: left;position:absolute;
-  top left
+  float: left;
+/*  position:absolute;
+  top: 0px;
+  left: 47px;*/
   margin-right: 7px;
 }
 
@@ -596,8 +611,11 @@ a:active {
 
 .subsription-wrapper {
   width: 549px;
+  height: 210px;/*без этого свойства обрезацется*/
   border-radius: 9px;
   background-color: #f8f7f4;
+  /*background-size: 549px 210px;
+  background-position: center center;*/
 }
 
 .email-subscription p {
@@ -612,8 +630,10 @@ a:active {
   float: right;
   margin-right: 26px;
   margin-bottom: 41px;
+  padding: 14px 19px 13px 19px;
   color: #fefefe;
-  width: 129px;
+  /*width: 129px;*/
+  border: none;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
@@ -657,6 +677,7 @@ iframe {
 .feedback-button {
   color: #fefefe;
   width: 252px;
+  padding: 13px 0px 13px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
@@ -687,19 +708,29 @@ iframe {
   line-height: 41px;
 }
 
-.breadcrumbs {
+.active-item a {
+  text-decoration: none;
+}
+.active-item {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #d07058;
+  border-radius: 50px;
+}
+
+.breadcrumbs li {
   list-style: none;
 }
 
-.breadcrumbs a {
-  color: #333333;
-}
-
-.breadcrumbs-current {
-  font-size: 16px;
-  line-height: 18px;
+.breadcrumbs-current a {
+  width: 220px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
   color: #ffffff;
-  background-color: #d07058;
 }
 
 .filters fieldset {
@@ -727,6 +758,8 @@ iframe {
   opacity: 0.5;
 }
 
+
+
 .catalog-list {
   list-style: none;
 }
@@ -736,8 +769,7 @@ iframe {
 }
 
 .catalog-item {
-  min-width: 200px;
-  max-width: 267px;
+  width: 267px;
 }
 
 .catalog-item:hover  {
@@ -765,6 +797,7 @@ iframe {
 .catalog-list .item-button {
   color: #fefefe;
   width: 200px;
+  padding: 13px 0px 13px;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -932,12 +965,12 @@ iframe {
   color: rgba(255, 255, 255, 0.7);
 }*/
 
-.benefits-link {
+.benefits-list {
   margin: 0;
-  padding: 0;
+  padding: 0;tg
 }
 
-.benefits-link ul {
+.benefits-list ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -945,7 +978,7 @@ iframe {
   justify-content: center;
 }
 
-.benefits-link li {
+.benefits-list li {
   list-style: none;
   width: 161px;
 }
