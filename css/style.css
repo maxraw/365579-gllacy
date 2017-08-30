@@ -473,14 +473,11 @@ a:active {
 }
 
 .raspberries-promo {
-
-
   background: url("../img/raspberries-logo-1.png") no-repeat;
   background-size: 100%;
 }
 
 .chocolade-promo {
-
   background: url("../img/choco-logo.png") no-repeat;
   background-size: 100%;
 }
@@ -537,7 +534,6 @@ a:active {
 /*Конец промо*/
 /*Начало лида*/
 .main-lead {
-  position: relative;
   margin: 0;
   padding: 0;
   margin-top: 40px;
@@ -550,6 +546,7 @@ a:active {
 }
 
 .lead-text h2 {
+  position: relative;
   margin: 0;
   padding-left: 21px;
   padding-top: 28px;
@@ -561,12 +558,44 @@ a:active {
   line-height: 30px;
 }
 
+.lead-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+.lead-list .lead-item {
+  margin: 0;
+  padding: 0;
+  max-width: 476px;
+}
+
+/*.lead-item-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}*/
+
 .lead-list p {
   list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 91px;
+  padding: 0;
   color: #323232;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 
 .main-lead li {
@@ -588,9 +617,9 @@ a:active {
 
 .lead-list .icon-icecream::before {
   content: "";
-  position: absolute;
-  top: 93px;
-  left: 20px;
+  /*position: absolute;
+  top: 11px;
+  left: 20px;*/
   background-image: url("../img/ice-cream.svg");
   background-repeat: no-repeat;
   width: 49px;
@@ -601,9 +630,9 @@ a:active {
 
 .lead-list .icon-cow::before {
   content: "";
-  position: absolute;
-  top: 93px;
-  left: 585px;
+  /*position: absolute;
+  top: 11px;
+  left: 585px;*/
   background-image: url("../img/cow.svg");
   background-repeat: no-repeat;
   width: 49px;
@@ -614,9 +643,9 @@ a:active {
 
 .lead-list .icon-leaflet::before {
   content: "";
-  position: absolute;
-  top: 181px;
-  left: 20px;
+  /*position: absolute;
+  top: 99px;
+  left: 20px;*/
   background-image: url("../img/eco.svg");
   background-repeat: no-repeat;
   width: 49px;
@@ -627,9 +656,9 @@ a:active {
 
 .lead-list .icon-thermometer::before {
   content: "";
-  position: absolute;
-  top: 181px;
-  left: 585px;
+  /*position: absolute;
+  top: 99px;
+  left: 585px;*/
   background-image: url("../img/thermometer.svg");
   background-repeat: no-repeat;
   width: 49px;
@@ -641,7 +670,10 @@ a:active {
 
 .main-info {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
   margin-top: 40px;
 }
 
@@ -654,14 +686,16 @@ a:active {
 
 .main-blog-info h3 {
   list-style: none;
-  padding-left: 20px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 20px;
   font-size: 16px;
   color: #323232;
-
 }
 
 .main-blog-info a {
-  display: block;
+  margin: 0;
+  margin-top: 13px;
   list-style: none;
   padding-left: 20px;
   color: #323232;
@@ -672,19 +706,22 @@ a:active {
 }
 
 .email-subscription {
+  position: relative;
   width: 560px;
+  height: 220px;
   background-image: url("../img/border-image-subscription.png");
   background-repeat: no-repeat;
   border-radius: 9px;
 }
 
 .subsription-wrapper {
+  position: absolute;
+  top: 5px;
+  left: 6px;
   width: 549px;
-  height: 210px;/*без этого свойства обрезацется*/
+  height: 210px;
   border-radius: 9px;
   background-color: #f8f7f4;
-  /*background-size: 549px 210px;
-  background-position: center center;*/
 }
 
 .email-subscription p {
@@ -692,13 +729,27 @@ a:active {
   padding-right: 27px;
   font-size: 16px;
   color: #5a5a5a;
+}
 
+.half-width > input[type="email"] {
+  position: absolute;
+  top: 136px;
+  left: 26px;
+  width: 357px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  background-color: #ffffff;
+  color: #999999;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .email-subscription-button {
-  float: right;
-  margin-right: 26px;
-  margin-bottom: 41px;
+  position: absolute;
+  top: 135px;
+  right: 26px;
   padding: 14px 19px 13px 19px;
   color: #fefefe;
   /*width: 129px;*/
@@ -752,6 +803,12 @@ iframe {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+}
+
+.footer-contacts {
+  font-size: 18px;
+  line-height: 24px;
+  color: #323232;
 }
 /*Каталог*/
 .catalog {
@@ -944,7 +1001,6 @@ iframe {
 }
 
 .footer-social {
-
    float: left;
    margin-right: 7px;
 }
@@ -952,19 +1008,33 @@ iframe {
 .footer-social ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  width: 179px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.footer-social a {
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  border: 3px solid #ffffff;
+  border-radius: 100px;
+}
+
+/*.footer-social a {
   width: 32px;
   height: 32px;
   display: block;
   opacity: 0.8;
   border: 3px solid #ffffff;
   border-radius: 100px;
-}
+}*/
 
 .footer-social .social-button-tw::before {
   content: "";
@@ -974,7 +1044,6 @@ iframe {
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
-
 }
 
 .footer-social .social-button-inst::before {
@@ -1015,9 +1084,10 @@ iframe {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.benefits-list {
-  margin: 0;
-  padding: 0;
+.benefits {
+  width: 340px;
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 
 .benefits-list ul {
@@ -1042,12 +1112,6 @@ iframe {
   height: 13px;
   float: left;
   margin-right: 7px;
-}
-
-.footer-contacts {
-  font-size: 18px;
-  line-height: 24px;
-  color: #323232;
 }
 
 .footer-copyright {
