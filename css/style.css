@@ -17,6 +17,24 @@ body > input[type="radio"] {
   display: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .site-wrapper {
   min-width: 940px;
   background-color: #849d8f;
@@ -118,7 +136,6 @@ a:active {
   flex-direction: row;
   justify-content: flex-end;
   flex-grow: 2;
-  margin-right: 10px;
   align-content: stretch;
   align-items: stretch;
 }
@@ -135,6 +152,7 @@ a:active {
   position: absolute;
   left: 980px;
   top: 75px;
+  box-sizing: border-box;
 }
 
 .sub-menu {
@@ -171,6 +189,7 @@ a:active {
 }
 
 .login-link {
+  position: relative;
   padding-left: 44px;
   padding-top: 10px;
   padding-right: 16px;
@@ -178,14 +197,13 @@ a:active {
 }
 
 .basket-button {
-  padding-left: 16px;
+  position: relative;
+  padding-left: 6px;
   padding-top: 10px;
-  padding-right: 16px;
+  box-sizing: border-box;
 }
 
 .user-navigation a {
-  /*min-width: 32px;
-  max-width: 117px;*/
   color: #ffffff;
   text-align: center;
   display: block;
@@ -205,8 +223,8 @@ a:active {
 
 .search {
   width: 32px;
-  height: 32px;
-}
+  position: relative;
+} /*временно*/
 
 .search a {
   content: "";
@@ -216,6 +234,19 @@ a:active {
   background-size: 17px 17px;
   display: block;
   width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+}
+
+.search a:hover {
+  content: "";
+  background-image: url("../img/loupe_black.svg");
+  background-repeat: no-repeat;
+  background-position: 7px 7px;
+  background-size: 17px 17px;
+  display: block;
+  width: 32px;
+  height: 32px;
   text-indent: -9999px;
 }
 
@@ -227,6 +258,20 @@ a:active {
   background-size: 21px 19px;
   display: block;
   width: 92px;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.enter-button a:hover {
+  content: "";
+  text-decoration: none;
+  background-image: url("../img/entrance_black.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+  background-size: 21px 19px;
+  display: block;
+  width: 92px;
+  height: 32px;
   box-sizing: border-box;
 }
 
@@ -238,6 +283,18 @@ a:active {
   background-size: 21px 20px;
   display: block;
   width: 117px;
+  height: 32px;
+}
+
+.basket a:hover {
+  content: "";
+  background-image: url("../img/basket_black.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+  background-size: 21px 20px;
+  display: block;
+  width: 117px;
+  height: 32px;
 }
 
 .user-navigation a:hover,
@@ -409,6 +466,7 @@ a:active {
 }
 
 .promo-item {
+  position: relative;
   margin-top: 47px;
   width: 560px;
   border-radius: 15px;
@@ -428,7 +486,10 @@ a:active {
 }
 
 .promo-item h2 {
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 169px;
+  text-align: left;
+  white-space: nowrap;
   padding-top: 15px;
   padding-left: 20px;
   list-style: none;
@@ -438,62 +499,77 @@ a:active {
   color: #ffffff;
 }
 
-.raspberries-promo h2 {
-  text-align: left;
-  white-space: nowrap;
-}
-
-.chocolade-promo h2 {
-  text-align: left;
-  white-space: nowrap;
-}
-
 .promo-item p {
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-right: 30px;
-  padding-bottom: 14px;
+  position: absolute;
+  top: 75px;
+  left: auto;
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 30px;
   font-size: 18px;
   color: #ffffff;
 }
 
-.promo-button {
-  /*width: 165px;*/
+.promo-item .promo-button {
+  position: absolute;
+  bottom: 23px;
+  right: 21px;
   padding: 15px 24px 14px 22px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
   border-radius: 50px;
-  float: right;
 }
 
-.promo-button-choco {
-  /*width: 189px;*/
+.promo-item .promo-button-choco {
+  position: absolute;
+  bottom: 23px;
+  right: 21px;
   padding: 14px 21px 14px 22px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
   border-radius: 50px;
-  float: right;
 }
 
 /*Конец промо*/
 /*Начало лида*/
 .main-lead {
+  position: relative;
   margin: 0;
   padding: 0;
   margin-top: 40px;
   width: 1146px;
-  min-height: 306px;
+  /*min-height: 306px;*/
   color: #323232;
   background-image: url("../img/wafer-background.jpg");
   background-repeat: repeat;
   border-radius: 15px;
 }
 
-.main-lead li {/*поменять класс у ли*/
+.lead-text h2 {
+  margin: 0;
+  padding-left: 21px;
+  padding-top: 28px;
+  padding-right: 153px;
+  list-style: none;
+  color: #323232;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.lead-list p {
+  list-style: none;
+  color: #323232;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.main-lead li {
   list-style: none;
   width: 476px;
 }
@@ -512,19 +588,22 @@ a:active {
 
 .lead-list .icon-icecream::before {
   content: "";
+  position: absolute;
+  top: 93px;
+  left: 20px;
   background-image: url("../img/ice-cream.svg");
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
   float: left;
-/*  position:absolute;
-  top: 0px;
-  left: 47px;*/
   margin-right: 7px;
 }
 
 .lead-list .icon-cow::before {
   content: "";
+  position: absolute;
+  top: 93px;
+  left: 585px;
   background-image: url("../img/cow.svg");
   background-repeat: no-repeat;
   width: 49px;
@@ -535,6 +614,9 @@ a:active {
 
 .lead-list .icon-leaflet::before {
   content: "";
+  position: absolute;
+  top: 181px;
+  left: 20px;
   background-image: url("../img/eco.svg");
   background-repeat: no-repeat;
   width: 49px;
@@ -545,31 +627,15 @@ a:active {
 
 .lead-list .icon-thermometer::before {
   content: "";
+  position: absolute;
+  top: 181px;
+  left: 585px;
   background-image: url("../img/thermometer.svg");
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
   float: left;
   margin-right: 7px;
-}
-
-.lead-text h2 {
-  padding-left: 21px;
-  padding-top: 28px;
-  padding-right: 153px;
-  list-style: none;
-  color: #323232;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 30px;
-}
-
-.lead-list p {
-  list-style: none;
-  color: #323232;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
 }
 /*Конец лида*/
 
@@ -775,7 +841,6 @@ iframe {
 }
 
 .catalog-item:hover  {
-  min-width: 220px;
   max-width: 293px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
