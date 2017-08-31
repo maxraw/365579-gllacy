@@ -44,16 +44,16 @@
             <div class="search">
               <a href="#" class="search__link">search</a>
                <form action="#" method="post">
-                 <input type="search" name="search">
+                 <input class="visually-hidden" type="search" name="search">
                </form>
             </div>
           </li>
           <li class="enter-button"><a class="login-link" href="login.html">Вход</a></li>
-          <li class="basket"><a class="button basket-button" href="basket.html">Пусто</a></li>
+          <li class="basket"><a class="button basket-button" href="basket.html">2 товара</a></li>
         </ul>
         <div class="header-info">
           <p class="header-shedule">С 10 до 20, ежедневно</p>
-          <p class="header-phone">8 812 450-25-25</p>
+          <a class="header-phone" href="tel:88124502525">8 812 450-25-25</a>
         </div>
       </nav>
     </header>
@@ -65,24 +65,24 @@
       </ul>
       <h1 class="catalog-page-title">Сливочное мороженое</h1>
       <section class="filters">
-      <form action="#" method="post">
+      <form class="filters-form" action="#" method="post">
         <fieldset class="filter-select">
           <legend class="filter-select-name">Сортировка:</legend>
-          <select class="filter-select" name="year">
+          <select class="filter filter-select" name="year">
                 <option value="popular-item" selected>по популярности</option>
           </select>
         </fieldset>
-        <div class="half-width">
+        <div class="range-filter">
           <legend for="pricerange">Цена: 100 руб. - 500 руб.</legend>
-          <div class="skroll">
-           <button type="button" class="skroll_left"></button>
-           <button type="button" class="skroll_right"></button>
+          <div class="filter skroll">
+           <input class="skroll_left" type="range" min="100" max="500" step="10" value="150"></input>
+           <input class="skroll_right" type="range" min="100" max="500" step="10" value="500"></input>
            <div class="skroll_field"></div>
           </div>
         </div>
         <fieldset>
           <legend>Жирность:</legend>
-            <ul>
+            <ul class="filter filters-list">
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-radio" id="fat_up_zero" type="radio" name="product-group" value="null">
                 <label for="fat_up_zero">0%</label>
@@ -103,7 +103,7 @@
         </fieldset>
         <fieldset>
           <legend>Наполнители:</legend>
-          <ul>
+          <ul class="filter filters-list">
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-checkbox" id="filler_chocolate" type="checkbox" name="chocolate" checked>
               <label for="filler_chocolate">шоколадные</label>
@@ -135,19 +135,17 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <a href="catalog-item.html">
-                <img src="img/icecream_orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <img src="img/icecream_orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             </a>
             <p class="catalog-item-price">
               <span class="price">310</span>
               <span>/кг</span>
             </p>
-            <h3>
               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное с апельсиновым</span>
                 <span class="catalog-item-title">джемом и цитрусовой стружкой</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -157,13 +155,11 @@
               <span class="price">380</span>
               <span>/кг</span>
             </p>
-            <h3>
-              <a class="item-link" href="catalog-item.html">
-                <span class="catalog-category">Сливочно-кофейное с кусочками</span>
-                <span class="catalog-item-title">шоколада</span>
+            <a class="item-link" href="catalog-item.html">
+                <span class="catalog-category">Сливочно-кофейное с</span>
+                <span class="catalog-item-title">кусочками шоколада</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -173,13 +169,11 @@
               <span class="price">355</span>
               <span>/кг</span>
             </p>
-            <h3>
-              <a class="item-link" href="catalog-item.html">
-                <span class="catalog-category">Сливочно-клубничное с</span>
-                <span class="catalog-item-title">присыпкой из белого шоколада</span>
-              </a>
+            <a class="item-link" href="catalog-item.html">
+              <span class="catalog-category">Сливочно-клубничное с</span>
+              <span class="catalog-item-title">присыпкой из белого шоколада</span>
+            </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -189,13 +183,11 @@
               <span class="price">415</span>
               <span>/кг</span>
             </p>
-            <h3>
               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное крем-брюле с</span>
                 <span class="catalog-item-title">карамельной подливкой</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -205,13 +197,11 @@
               <span class="price">325</span>
               <span>/кг</span>
             </p>
-            <h3>
               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное с брусничным</span>
                 <span class="catalog-item-title">джемом</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -221,13 +211,11 @@
               <span class="price">410</span>
               <span>/кг</span>
             </p>
-            <h3>
-              <a class="item-link" href="catalog-item.html">
+            <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочно-черничное с цельными</span>
                 <span class="catalog-item-title">ягодами черники</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -237,13 +225,11 @@
               <span class="price">375</span>
               <span>/кг</span>
             </p>
-            <h3>
               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочно-лимонное с</span>
                 <span class="catalog-item-title">карамельной присыпкой</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -253,13 +239,11 @@
                <span class="price">320</span>
                <span>/кг</span>
              </p>
-            <h3>
               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное с шоколадной</span>
                 <span class="catalog-item-title">стружкой</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -269,13 +253,11 @@
                <span class="price">440</span>
                <span>/кг</span>
              </p>
-             <h3>
-              <a class="item-link" href="catalog-item.html">
+               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочно-ванильное с</span>
                 <span class="catalog-item-title">кусочками шоколада</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-             </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -285,13 +267,11 @@
               <span class="price">435</span>
               <span>/кг</span>
              </p>
-             <h3>
               <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное с ментоловым</span>
                 <span class="catalog-item-title">сиропом</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -301,13 +281,11 @@
               <span class="price">355</span>
               <span>/кг</span>
              </p>
-             <h3>
-              <a class="item-link" href="catalog-item.html">
+             <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное с кусочками черного</span>
                 <span class="catalog-item-title">шоколада</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
           <li class="catalog-item">
              <a href="catalog-item.html">
@@ -317,13 +295,11 @@
               <span class="price">420</span>
               <span>/кг</span>
              </p>
-             <h3>
-              <a class="item-link" href="catalog-item.html">
+             <a class="item-link" href="catalog-item.html">
                 <span class="catalog-category">Сливочное с</span>
                 <span class="catalog-item-title">мятным сиропом</span>
               </a>
               <a class="item-button site-button" href="#">Быстрый просмотр</a>
-            </h3>
           </li>
         </ul>
         <ul class="pagination-list">

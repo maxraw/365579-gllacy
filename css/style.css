@@ -153,6 +153,7 @@ a:active {
   left: 980px;
   top: 75px;
   box-sizing: border-box;
+  text-align: right;
 }
 
 .sub-menu {
@@ -854,16 +855,57 @@ iframe {
   line-height: 41px;
 }
 
+/*конец каталога*/
+
+.breadcrumbs {
+  float: left;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none
+}
+
 .breadcrumbs li {
+  position: relative;
+  display: inline-block;
   list-style: none;
+  padding-right: 18px
+  vertical-align: top;
 }
 
 .breadcrumbs-current a {
+  position: relative;
   width: 220px;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+  vertical-align: top;
   color: #ffffff;
+}
+
+.breadcrumbs li::after {
+  content: "»";
+  position: absolute;
+  top: 2px;
+  right: -10px;
+
+  color: #ffffff;
+}
+
+/*Фильтры*/
+
+.filters-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters-list {
+  display: flex;
+}
+
+.filter {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
 }
 
 .filters fieldset {
@@ -888,6 +930,18 @@ iframe {
 .filter-input:disabled + label {
   color: #000000;
   opacity: 0.5;
+}
+
+.range-filter {
+  height: 36px;
+  padding: 0 15px;
+  line-height: 36px;
+  border-radius: 18px;
+}
+
+input[type="range"] {
+  vertical-align: middle;
+  border: none;
 }
 
 .catalog-list {
