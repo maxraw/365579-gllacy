@@ -314,11 +314,14 @@ a:active {
 .site-navigation .sub-menu {
   list-style: none;
   position: absolute;
+  top: 52px;
   display: none;
+  margin-left: -7px;
   width: 143px;
   border-radius: 4px 5px 5px 4px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
+  box-sizing: border-box;
 }
 
 .sub-menu a {
@@ -545,6 +548,10 @@ a:active {
   border-radius: 15px;
 }
 
+.lead-text {
+  margin-top: -60px;
+}
+
 .lead-text h2 {
   position: relative;
   margin: 0;
@@ -617,53 +624,57 @@ a:active {
 
 .lead-list .icon-icecream::before {
   content: "";
-  /*position: absolute;
+  display: block;
+  position: absolute;
   top: 11px;
-  left: 20px;*/
+  left: 20px;
   background-image: url("../img/ice-cream.svg");
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
-  float: left;
+  /*float: left;*/
   margin-right: 7px;
 }
 
 .lead-list .icon-cow::before {
   content: "";
-  /*position: absolute;
+  display: block;
+  position: absolute;
   top: 11px;
-  left: 585px;*/
+  left: 585px;
   background-image: url("../img/cow.svg");
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
-  float: left;
+  /*float: left;*/
   margin-right: 7px;
 }
 
 .lead-list .icon-leaflet::before {
   content: "";
-  /*position: absolute;
+  display: block;
+  position: absolute;
   top: 99px;
-  left: 20px;*/
+  left: 20px;
   background-image: url("../img/eco.svg");
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
-  float: left;
+  /*float: left;*/
   margin-right: 7px;
 }
 
 .lead-list .icon-thermometer::before {
   content: "";
-  /*position: absolute;
+  display: block;
+  position: absolute;
   top: 99px;
-  left: 585px;*/
+  left: 585px;
   background-image: url("../img/thermometer.svg");
   background-repeat: no-repeat;
   width: 49px;
   height: 49px;
-  float: left;
+  /*float: left;*/
   margin-right: 7px;
 }
 /*Конец лида*/
@@ -825,26 +836,22 @@ iframe {
 }
 
 .catalog-item-price .price::after {
-  content: url("../img/ruble.svg");
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  width: 26px;
+  height: 31px;
+  background-image: url("../img/ruble.svg");
+  background-repeat: no-repeat;
+  background-position: -2px 0px;
 }
 
 .catalog-page-title {
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
-}
-
-.active-item a {
-  text-decoration: none;
-}
-.active-item {
-  vertical-align: middle;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #d07058;
-  border-radius: 50px;
 }
 
 .breadcrumbs li {
@@ -883,8 +890,6 @@ iframe {
   opacity: 0.5;
 }
 
-
-
 .catalog-list {
   list-style: none;
 }
@@ -894,19 +899,46 @@ iframe {
 }
 
 .catalog-item {
+  position: relative;
   width: 267px;
+  text-align: center;
 }
 
-.catalog-item:hover  {
-  max-width: 293px;
+.catalog-item::before {
+  content: "";
+  display: block;
+  width: 61px;
+  height: 61px;
+  position: absolute;
+  background-image: url("../img/hit.svg");
+}
+
+.catalog-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: 60%;
   background-color: rgba(248, 247, 244, 0.2);
+  display: none;
+}
+
+.catalog-item:hover::after {
+  display: block;
+  cursor: pointer;
+}
+
+.catalog-item:hover .item-button {
+  z-index: 1;
 }
 
 .catalog-item-price span {
+  position: absolute;
+  top: 214px;
+  left: 110px;
   font-size: 30px;
   line-height: 45px;
   font-weight: 700;
@@ -914,24 +946,42 @@ iframe {
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.catalog-item .item-link {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+}
+
 .catalog-item-price .price {
+  position: absolute;
+  top: 214px;
+  left: 0px;
   font-size: 45px;
 }
 
 .catalog-list .item-button {
   color: #fefefe;
   width: 200px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 13px 0px 13px;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  display: block;
+  position: relative;
   border-radius: 50px;
   box-shadow: 0 1px 2px #ac1000;
   background-color: #e84d37;
   background-image: linear-gradient(top, #e74a35, #f26843);
   background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+  z-index: -1;
 }
 
+/*Пагинация*/
 .pagination-list {
   list-style: none;
 }
