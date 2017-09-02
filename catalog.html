@@ -68,9 +68,13 @@
       <form class="filters-form" action="#" method="post">
         <fieldset class="filter-select">
           <legend class="filter-select-name">Сортировка:</legend>
-          <select class="filter filter-select" name="year">
+          <div class="filter-item-wrapper">
+          <select class="filter filter-select-item" name="year">
                 <option value="popular-item" selected>по популярности</option>
+                <option value="popular-item">самые дорогие</option>
+                <option value="popular-item">самые дешевые</option>
           </select>
+        </div>
         </fieldset>
         <div class="range-filter">
           <legend for="pricerange">Цена: 100 руб. - 500 руб.</legend>
@@ -82,7 +86,7 @@
         </div>
         <fieldset>
           <legend>Жирность:</legend>
-            <ul class="filter filters-list">
+            <ul class="filter filters-list-fat">
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-radio" id="fat_up_zero" type="radio" name="product-group" value="null">
                 <label for="fat_up_zero">0%</label>
@@ -103,7 +107,7 @@
         </fieldset>
         <fieldset>
           <legend>Наполнители:</legend>
-          <ul class="filter filters-list">
+          <ul class="filter filters-list-fillers">
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-checkbox" id="filler_chocolate" type="checkbox" name="chocolate" checked>
               <label for="filler_chocolate">шоколадные</label>
