@@ -82,34 +82,6 @@ a:active {
   color: #ffbc9e;
 }
 
-.site-button {
-  background-color: #f26843;
-  background-image: linear-gradient(top, #e74a35, #f26843);
-  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
-  text-align: center;
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-}
-
-.site-button:hover {
-  color: #ffffff;
-  background-color: #f58669;
-  background-image: linear-gradient(top, #ec6e5d, #f58669);
-  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
-  box-shadow: 0 2px 2px #ac1000;
-}
-
-.site-button:active {
-  color: #fceeec;
-  background-color: #d74531;
-  background-image: linear-gradient(top, #e1613e, #d74531);
-  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
-  box-shadow: inset 0 2px 2px #942718;
-}
-
 .main-navigation {
   margin: 0;
   padding: 0;
@@ -127,6 +99,7 @@ a:active {
 
 .site-navigation li {
   list-style: none;
+  color: #ffffff;
   margin-left: 0;
 }
 
@@ -144,6 +117,8 @@ a:active {
 }
 
 .user-navigation li {
+  list-style: none;
+  color: #ffffff;
   margin-left: 10px;
 }
 
@@ -155,6 +130,7 @@ a:active {
   position: absolute;
   left: 980px;
   top: 75px;
+  color: #ffffff;
   box-sizing: border-box;
   text-align: right;
 }
@@ -170,13 +146,6 @@ a:active {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.site-navigation li,
-.user-navigation li {
-  list-style: none;
-  color: #ffffff;
-  margin-left: 10px;
 }
 
 .site-navigation a {
@@ -371,11 +340,17 @@ a:active {
 .header-shedule {
  font-size: 14px;
  line-height: 16px;
+ color: #ffffff;
+ font-weight: 700;
 }
 
 .header-phone {
+  list-style: none;
   font-size: 22px;
   line-height: 24px;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /*Слайдер начало*/
@@ -389,6 +364,7 @@ a:active {
 .slide-title {
   width: 700px;
   margin: 0 auto;
+  margin-top: -93px;
   margin-bottom: 30px;
   font-size: 60px;
   font-weight: 800;
@@ -473,9 +449,8 @@ a:active {
 }
 
 .promo-item {
-  position: relative;
-  margin-top: 47px;
   width: 560px;
+  min-height: 229px;
   border-radius: 15px;
 }
 
@@ -491,7 +466,6 @@ a:active {
 
 .promo-item h2 {
   margin: 0;
-  margin-bottom: 169px;
   text-align: left;
   white-space: nowrap;
   padding-top: 15px;
@@ -504,9 +478,6 @@ a:active {
 }
 
 .promo-item p {
-  position: absolute;
-  top: 75px;
-  left: auto;
   margin: 0px;
   margin-left: 20px;
   margin-right: 30px;
@@ -515,9 +486,6 @@ a:active {
 }
 
 .promo-item .promo-button {
-  position: absolute;
-  bottom: 23px;
-  right: 21px;
   padding: 11px 24px 11px 22px;
   font-size: 18px;
   line-height: 24px;
@@ -527,9 +495,6 @@ a:active {
 }
 
 .promo-item .promo-button-choco {
-  position: absolute;
-  bottom: 23px;
-  right: 21px;
   padding: 11px 21px 11px 22px;
   font-size: 18px;
   line-height: 24px;
@@ -686,7 +651,7 @@ p {
 }
 
 .email-subscription {
-  position: relative;
+  /*position: relative;*/
   width: 560px;
   height: 220px;
   background-image: url("../img/border-image-subscription.png");
@@ -695,9 +660,8 @@ p {
 }
 
 .subsription-wrapper {
-  position: absolute;
-  top: 5px;
-  left: 6px;
+  margin-top: 5px;
+  margin-left: 5px;
   width: 549px;
   height: 210px;
   border-radius: 9px;
@@ -713,9 +677,8 @@ p {
 }
 
 .half-width > input[type="email"] {
-  position: absolute;
-  top: 136px;
-  left: 26px;
+  margin-top: 45px;
+  margin-left: 25px;
   width: 357px;
   height: 44px;
   border-radius: 4px;
@@ -728,10 +691,15 @@ p {
   padding-left: 5px;
 }
 
+.email-button {
+  margin-top: -49px;
+  margin-left: 400px;
+}
+
 .email-subscription-button {
-  position: absolute;
+  /*position: absolute;
   top: 135px;
-  right: 26px;
+  right: 26px;*/
   padding: 12px 16px 10px 16px;
   color: #fefefe;
   border: none;
@@ -787,14 +755,13 @@ iframe {
   margin: 0;
   margin-top: 15px;
   margin-left: 15px;
+  margin-bottom: 25px;
 }
 
 .feedback-button {
-  color: #fefefe;
-  width: 252px;
-  padding: 10px 0px 10px;
-  margin-top: 26px;
-  margin-left: 15px;
+  color: #fefefe;;
+  padding: 10px 20px 10px;
+  margin-left: 30px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
@@ -1272,14 +1239,6 @@ input[type="range"] {
   background-position: 0px 0px;
 }
 
-.footer-social a:hover {
-  background-color: #ffffff;
-}
-
-.footer-social a:active {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .benefits {
   list-style: none;
   width: 50%;
@@ -1337,4 +1296,88 @@ input[type="range"] {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+}
+
+.site-button {
+  background-color: #f26843;
+  background-image: linear-gradient(top, #e74a35, #f26843);
+  background-image: -webkit-linear-gradient(top, #e74a35, #f26843);
+  text-align: center;
+  /*display: block;*/
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.site-button:hover {
+  color: #ffffff;
+  background-color: #f58669;
+  background-image: linear-gradient(top, #ec6e5d, #f58669);
+  background-image: -webkit-linear-gradient(top, #ec6e5d, #f58669);
+  box-shadow: 0 2px 2px #ac1000;
+}
+
+.site-button:active {
+  color: #fceeec;
+  background-color: #d74531;
+  background-image: linear-gradient(top, #e1613e, #d74531);
+  background-image: -webkit-linear-gradient(top, #e1613e, #d74531);
+  box-shadow: inset 0 2px 2px #942718;
+}
+
+.modal {
+  position: fixed;
+  color: #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-color: #f8f7f4;
+}
+
+.modal-login {
+  /*display: none;*/
+  top: 55px;
+  left: 61%;
+  width: 277px;
+  padding: 20px 0 20px 20px;
+}
+
+.login-form p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  height: 44px;
+  color: #999999;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid #d3d3d2;
+  background-color: #ffffff;
+}
+
+.login-button {
+  padding: 15px 25px 14px 25px;
+  color: #fefefe;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  box-shadow: 0 1px 2px #ac1000;
+  background-color: #e84d37;
+}
+
+.restore a {
+  color: #323232;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
 }

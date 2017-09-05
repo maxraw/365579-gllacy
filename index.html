@@ -194,7 +194,7 @@
                    <label for="email" class="visually-hidden">Электронная почта</label>
                    <input id="email" type="email" name="email" placeholder="Электронная почта" required>
                  </div>
-                 <div class="button">
+                 <div class="email-button">
                    <input class="site-button email-subscription-button" type="submit" value="Отправить">
                  </div>
               </form>
@@ -255,10 +255,12 @@
           </ul>
         </div>
         <div class="footer-copyright">
-          <img class="copyright-logo" src="img/logo-htmlacademy.svg" alt="HTML academy" width="108" height="39">
+          <a class="copyright-logo" href="https://htmlacademy.ru">
+          <img src="img/logo-htmlacademy.svg" alt="HTML academy" width="108" height="39">
+          </a>
           <p>Сделано в
           <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-          &#169 2016
+          &#169 2017
           </p>
         </div>
       </div>
@@ -266,12 +268,10 @@
 
     <!--Скрытые формы-->
       <section class="modal modal-login">
-        <h2>Вход</h2>
-          <p>Введите свой логин и пароль.</p>
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-              <label class="visually-hidden" for="user-login">Логин</label>
-              <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+              <label class="visually-hidden" for="user-login">Электронная почта</label>
+              <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Электронная почта">
             </p>
             <p>
               <label class="visually-hidden" for="user-password">Пароль</label>
@@ -281,13 +281,14 @@
               <label class="login-checkbox">
                 <input type="checkbox" name="remember" class="visually-hidden">
                 <span class="checkbox-indicator"></span>
-              Запомните меня
               </label>
-              <a class="restore" href="#">Я забыл пароль!</a>
+              <button class="site-button login-button" type="submit">Войти</button>
             </p>
-            <button class="button" type="submit">Войти</button>
           </form>
-            <button class="modal-close" type="button">Закрыть</button>
+          <div class="restore">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </div>
       </section>
 
     </div>
