@@ -958,6 +958,7 @@ iframe {
 
 .filters ul {
   list-style: none;
+  margin: 0;
   line-height: 18px;
 }
 
@@ -1003,6 +1004,54 @@ input[type="range"] {
   vertical-align: middle;
   border: none;
 }
+
+.range-controls {
+  position: relative;
+  width: 218px;
+  height: 36px;
+  border-radius: 50px;
+  margin-bottom: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.range-controls .scale {
+  margin-top: 5px;
+  padding-top: 17px;
+  height: 4px;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  bottom: 6px;
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  width: 6px;
+  height: 7px;
+}
+
 
 /*каталог*/
 .catalog-list {
@@ -1195,44 +1244,12 @@ input[type="range"] {
   border-radius: 100px;
 }
 
-.footer-social .social-button-tw::before {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/twitter.svg");
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
+.social-button:hover {
+  opacity: 1;
 }
 
-.footer-social .social-button-inst::before {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/instagram.svg");
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-}
-
-.footer-social .social-button-fb::before {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/fb.svg");
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-}
-
-.footer-social .social-button-vk::before {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/vk.svg");
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
+.social-button:active {
+  opacity: 0.7;
 }
 
 .benefits {
