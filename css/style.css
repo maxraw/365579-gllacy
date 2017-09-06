@@ -338,6 +338,7 @@ a:active {
 }
 
 .header-shedule {
+ margin-bottom: 8px;
  font-size: 14px;
  line-height: 16px;
  color: #ffffff;
@@ -449,9 +450,11 @@ a:active {
 }
 
 .promo-item {
+  padding: 23px 20px;
   width: 560px;
   min-height: 229px;
   border-radius: 15px;
+  box-sizing: border-box;
 }
 
 .raspberries-promo {
@@ -468,8 +471,6 @@ a:active {
   margin: 0;
   text-align: left;
   white-space: nowrap;
-  padding-top: 15px;
-  padding-left: 20px;
   list-style: none;
   font-size: 35px;
   line-height: 41px;
@@ -478,19 +479,19 @@ a:active {
 }
 
 .promo-item p {
+  width: 510px;
   margin: 0px;
-  margin-left: 20px;
-  margin-right: 30px;
+  margin-top: 10px;
   font-size: 18px;
   color: #ffffff;
 }
 
 .promo-item .promo-button {
-  /*display: block; добавить отсутупф всему контенеру*/
+  display: block;
   float: right;
-
-  width: 180px;
-  padding: 11px 24px 11px 22px;
+  width: 165px;
+  margin-top: 50px;
+  padding: 11px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -499,7 +500,11 @@ a:active {
 }
 
 .promo-item .promo-button-choco {
-  padding: 11px 21px 11px 22px;
+  display: block;
+  float: right;
+  width: 189px;
+  margin-top: 50px;
+  padding: 11px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -602,7 +607,7 @@ a:active {
   margin-right: 7px;
 }
 
-p {
+.lead-list p {
   margin: 0;
   color: #323232;
   font-size: 16px;
@@ -623,7 +628,7 @@ p {
 }
 
 .main-blog-info {
-  padding: 30px 20px;
+  padding: 26px 19px;
   box-sizing: border-box;
   border-radius: 15px;
   width: 560px;
@@ -634,8 +639,6 @@ p {
 .main-blog-info h3 {
   list-style: none;
   margin: 0;
-  margin-top: 20px;
-  margin-left: 20px;
   font-size: 16px;
   color: #323232;
 }
@@ -643,18 +646,13 @@ p {
 .main-blog-info a {
   width: 280px;
   display: block;
-  /*margin: 0;
-  margin-top: 15px;*/
+  margin-top: 11px;
   list-style: none;
   color: #323232;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
-  color: #323232; 3 div + float
-}
-
-.main-blog-info span {
-  padding-left: 20px;
+  color: #323232;
 }
 
 .email-subscription {
@@ -675,11 +673,14 @@ p {
 }
 
 .email-subscription p {
+  margin: 0;
   padding-top: 20px;
   padding-left: 27px;
   padding-right: 27px;
   font-size: 16px;
   color: #5a5a5a;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .half-width > input[type="email"] {
@@ -703,9 +704,6 @@ p {
 }
 
 .email-subscription-button {
-  /*position: absolute;
-  top: 135px;
-  right: 26px;*/
   padding: 12px 16px 10px 16px;
   color: #fefefe;
   border: none;
@@ -738,8 +736,9 @@ iframe {
   right: 135px;
   z-index: 1;
   box-sizing: border-box;
+  padding: 31px 16px;
   width: 302px;
-  height: 305px;
+  min-height: 305px;
   font-size: 14px;
   line-height: 20px;
   color: #323232;
@@ -748,26 +747,20 @@ iframe {
   background-repeat: no-repeat;
 }
 
-.footer-contacts {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.address-info {
+.address-info p {
   max-width: 220px;
   margin: 0;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 9px;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .feedback-button {
+  display: block;
   color: #fefefe;;
   padding: 10px 20px 10px;
-  margin-left: 30px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
@@ -775,10 +768,19 @@ iframe {
   line-height: 24px;
 }
 
-.footer-contacts {
+.address-info .footer-contacts {
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #323232;
+}
+
+.footer-phone {
+  color: #323232;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
 }
 /*Каталог*/
 .catalog {
@@ -792,19 +794,6 @@ iframe {
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
-}
-
-.catalog-item-price .price::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 5px;
-  left: 80px;
-  width: 26px;
-  height: 31px;
-  background-image: url("../img/ruble.svg");
-  background-repeat: no-repeat;
-  background-position: -2px 0px;
 }
 
 .catalog-page-title {
@@ -1063,15 +1052,23 @@ input[type="range"] {
   z-index: 1;
 }
 
-.catalog-item-price span {
+.catalog-item-price {
   position: absolute;
-  top: 214px;
-  left: 110px;
-  font-size: 30px;
+  bottom: 18%;
+  left: 0px;
+  font-size: 45px;
   line-height: 45px;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item-price span {
+  font-size: 30px;
+}
+
+.catalog-item-price .icon-ruble {
+  vertical-align: middle;
 }
 
 .catalog-item .item-link {
@@ -1080,13 +1077,6 @@ input[type="range"] {
   font-weight: 500;
   line-height: 22px;
   text-align: center;
-}
-
-.catalog-item-price .price {
-  position: absolute;
-  top: 214px;
-  left: 0px;
-  font-size: 45px;
 }
 
 .catalog-list .item-button {
