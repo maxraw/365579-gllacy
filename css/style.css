@@ -68,6 +68,10 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/group-icecream3-slider.png");
 }
 
+.main-container {
+  margin-top: -7%;
+}
+
 .inner-page {
   color: #ffffff;
 }
@@ -194,6 +198,15 @@ a:active {
   border-radius: 100px;
 }
 
+.catalog-active-item {
+  background-color: #d07058;
+  border-radius: 100px;
+}
+
+.active-item {
+  background-color: #d07058;
+}
+
 .search {
   width: 32px;
   position: relative;
@@ -211,7 +224,8 @@ a:active {
   text-indent: -9999px;
 }
 
-.search a:hover {
+.search a:hover,
+.search a:focus {
   content: "";
   background-image: url("../img/loupe_black.svg");
   background-repeat: no-repeat;
@@ -223,6 +237,21 @@ a:active {
   text-indent: -9999px;
 }
 
+.search input[type="search"] {
+  width: 341px;
+  height: 44px;
+  color: #999999;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid #d3d3d2;
+  background-color: #ffffff;
+}
+
 .enter-button a {
   content: "";
   background-image: url("../img/entrance.svg");
@@ -232,10 +261,12 @@ a:active {
   display: block;
   width: 92px;
   height: 32px;
+  font-weight: 500;
   box-sizing: border-box;
 }
 
-.enter-button a:hover {
+.enter-button a:hover,
+.enter-button a:focus {
   content: "";
   text-decoration: none;
   background-image: url("../img/entrance_black.svg");
@@ -257,11 +288,38 @@ a:active {
   display: block;
   width: 117px;
   height: 32px;
+  font-weight: 500;
 }
 
-.basket a:hover {
+.basket-active a {
+  content: "";
+  padding-left: 25px;
+  background-image: url("../img/basket-red.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+  background-size: 21px 20px;
+  display: block;
+  width: 117px;
+  height: 32px;
+  font-weight: 500;
+}
+
+.basket a:hover,
+.basket a:focus {
   content: "";
   background-image: url("../img/basket_black.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+  background-size: 21px 20px;
+  display: block;
+  width: 117px;
+  height: 32px;
+}
+
+.basket-active a:hover,
+.basket-active a:focus {
+  content: "";
+  background-image: url("../img/basket-red.svg");
   background-repeat: no-repeat;
   background-position: 16px 6px;
   background-size: 21px 20px;
@@ -529,6 +587,8 @@ a:active {
 }
 
 .main-lead {
+  margin: 0;
+  margin-top: -20px;
   background-image: url("../img/wafer-background.jpg");
   background-repeat: repeat;
   border-radius: 15px;
@@ -809,7 +869,6 @@ iframe {
   flex-wrap: nowrap;
   flex-direction: row;
   margin: 0;
-  margin-top: 20px;
   padding: 0;
   list-style: none
 }
@@ -843,7 +902,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 860px;
+  width: 865px;
 }
 
 .filters-list-fat {
@@ -869,22 +928,22 @@ iframe {
 .filter-option input[type="radio"] + label::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   width: 22px;
   height: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 3px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
 
 .filter-option input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
-  top: 7px;
-  left: 7px;
+  top: 4px;
+  left: 6px;
   width: 10px;
   height: 10px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
 
@@ -913,31 +972,31 @@ iframe {
 .filter-option input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 22px;
   height: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 5px;
 }
 
 .filter-option input[type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 8px;
-  width: 5px;
-  height: 8px;
-  border-right: 3px solid #ffffff;
-  border-bottom: 3px solid #ffffff;
+  top: -4px;
+  left: 10px;
+  width: 10px;
+  height: 20px;
+  border-right: 3px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
   transform: rotate(45deg);
 }
 
 .filters input[type="submit"] {
   width: 144px;
-  height: 36px;
-  margin-top: 38px;
-  border-radius: 20px;
+  height: 33px;
+  margin-top: 20px;
+  border-radius: 30px;
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.19);
   color: #ffffff;
@@ -947,13 +1006,27 @@ iframe {
   cursor: pointer;
 }
 
+.filters input[type="submit"]:hover {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.filters input[type="submit"]:active {
+  color: #323232;
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+}
+
 .filters fieldset {
   border: none;
+  padding-left: 0;
 }
 
 .filters legend {
   font-size: 14px;
   line-height: 16px;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .filters ul {
@@ -976,7 +1049,6 @@ iframe {
   width: 193px;
   height: 36px;
   margin: 0;
-  margin-left: -15px;
   overflow: hidden;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1000,38 +1072,56 @@ iframe {
   background-position: 170px center;
 }
 
+.filter-select-item:hover {
+  color: #323232;
+}
+
+.filter-select-item option {
+  color: #323232;
+}
+
 input[type="range"] {
   vertical-align: middle;
   border: none;
 }
 
-.range-controls {
-  position: relative;
-  width: 218px;
-  height: 36px;
-  border-radius: 50px;
-  margin-bottom: 32px;
+.range-filter {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-bottom: 16px;
+}
+
+.skroll-wrapper {
+  height: 24px;
+  margin-top: 5px;
+  padding: 6px 15px;
+  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.range-controls .scale {
-  margin-top: 5px;
-  padding-top: 17px;
+.range-controls {
+  position: relative;
+  width: 190px;
   height: 4px;
+  margin-top: 10px;
+  background-color: rgba(248, 247, 244, 0.5);
 }
 
 .range-controls .bar {
-  width: 80%;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 100px;
   height: 4px;
-  background-color: #ffffff;
+  background-color: #f8f7f4;
 }
 
 .range-toggle {
   position: absolute;
-  bottom: 6px;
+  top: -10px;
   width: 4px;
   height: 4px;
-
   background-color: #ababab;
   border: 10px solid #ffffff;
   border-radius: 50%;
@@ -1044,14 +1134,14 @@ input[type="range"] {
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 100%;
 }
 
 .range-toggle:hover {
   width: 6px;
-  height: 7px;
+  height: 6px;
 }
-
+/*конец фильтров*/
 
 /*каталог*/
 .catalog-list {
@@ -1065,8 +1155,8 @@ input[type="range"] {
 .catalog-item {
   position: relative;
   width: 267px;
+  height: 395px;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .catalog-item::before {
@@ -1103,7 +1193,7 @@ input[type="range"] {
 
 .catalog-item-price {
   position: absolute;
-  bottom: 18%;
+  bottom: 33%;
   left: 0px;
   font-size: 45px;
   line-height: 45px;
@@ -1135,7 +1225,7 @@ input[type="range"] {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 13px 0px 13px;
+  padding: 10px 0px 10px;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -1149,35 +1239,54 @@ input[type="range"] {
 
 /*Пагинация*/
 .pagination-list {
+  display: flex;
+  width: 205px;
+  margin-left: auto;
+  margin-right: -1%;
+  margin-bottom: 38px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
   list-style: none;
 }
 
+.pagination-prev {
+  transform: rotate(180deg);
+}
+
 .pagination-item a {
-  min-width: 25px;
+  text-decoration: none;
+}
+
+.pagination-item {
+  width: 25px;
+  height: 26px;
+  border-radius: 50%;
+  margin: 5px;
   line-height: 18px;
   text-align: center;
-  vertical-align: middle;
   text-decoration: none;
   font-weight: 500;
   color: #ffffff;
   background-color: #849d8f;
 }
 /*Наведение*/
-.pagination-item a:hover {
-  width: 25px;
+.pagination-item:hover {
   color: #ffffff;
   background-color: rgba(255, 0, 0, 0.2);
   opacity: 0.2;
 }
 /*Нажатие и активное состояние*/
-.pagination-item a:focus,
-.pagination-item a:active {
-  width: 25px;
+.pagination-item:focus,
+.pagination-item:active {
   color: #323232;
   background-color: #ffffff;
 }
 /*Текущая страница*/
-.pagination-item-current a {
+.pagination-item-current {
+  width: 25px;
+  height: 26px;
+  border-radius: 50%;
   color: #323232;
   background-color: #ffffff;
 }
@@ -1187,14 +1296,6 @@ input[type="range"] {
 .pagination-item-current a:active {
   color: #323232;
   background-color: #ffffff;
-}
-
-.pagination-item .pagination-prev {
-  margin-right: 10px;
-  text-indent: -1000px;
-  background-image: url("../img/select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .pagination-item .pagination-next {
