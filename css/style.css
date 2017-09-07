@@ -717,7 +717,7 @@ a:active {
 
 .email-subscription {
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   background-image: url("../img/border-image-subscription.png");
   background-repeat: no-repeat;
   border-radius: 9px;
@@ -727,7 +727,7 @@ a:active {
   margin-top: 5px;
   margin-left: 5px;
   width: 549px;
-  height: 210px;
+  min-height: 210px;
   border-radius: 9px;
   background-color: #f8f7f4;
 }
