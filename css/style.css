@@ -99,6 +99,7 @@ a:active {
   flex-direction: row;
   justify-content: flex-start;
   flex-grow: 1;
+  padding-left: 8px;
 }
 
 .site-navigation li {
@@ -132,8 +133,8 @@ a:active {
 
 .header-info {
   position: absolute;
-  left: 980px;
-  top: 75px;
+  right: 5px;
+  top: 48px;
   color: #ffffff;
   box-sizing: border-box;
   text-align: right;
