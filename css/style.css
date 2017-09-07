@@ -557,7 +557,7 @@ a:active {
   border-radius: 50px;
 }
 
-.promo-item .promo-button-choco {
+.promo-item .promo-button-chocolade {
   display: block;
   float: right;
   width: 189px;
@@ -788,6 +788,7 @@ iframe {
   margin-top: 40px;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-address {
@@ -1154,7 +1155,7 @@ input[type="range"] {
 
 .catalog-item {
   position: relative;
-  width: 267px;
+  width: 22.2%;
   height: 395px;
   text-align: center;
 }
