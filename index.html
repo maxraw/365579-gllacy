@@ -316,18 +316,18 @@
             <h2 class="feedback-caption">Мы обязательно вам ответим!</h2>
             <form class="modal-contact-form" action="#" method="post">
               <div class="field">
-                <input class="modal-feedback-item feedback-field" type="text" name="name" id="contact-name" required>
-                <label class="feedback-label" for="contact-name" data-first="Как вас зовут"></label>
+                <label class="visually-hidden feedback-label" for="contact-name">Как вас зовут?</label>
+                <input class="modal-feedback-item feedback-field" type="text" name="contact-name" id="contact-name" placeholder="Как вас зовут?" required>
               </div>
               <div class="field">
-                <input class="modal-feedback-item feedback-field" type="text" name="email" id="contact-email" required>
-                <label class="feedback-label" for="contact-email" data-first="Ваша почта для ответа?"></label>
+                <label class="visually-hidden feedback-label" for="contact-email">Ваша почта для ответа?</label>
+                <input class="modal-feedback-item feedback-field" type="email" name="contact-email" id="contact-email" placeholder="Ваша почта для ответа?" required>
               </div>
               <div class="feedback-field">
-                <textarea class="modal-contact-text" name="text" rows="6" id="input-text" required></textarea>
-                <label class="feedback-label" for="input-text" data-first="Напишите что-нибудь..."></label>
+                <label class="visually-hidden feedback-label" for="input-text">Напишите что-нибудь...</label>
+                <textarea class="modal-textarea" name="text" rows="6" id="input-text" placeholder="Напишите что-нибудь..." required></textarea>
               </div>
-              <div class="modal-contact-btn">
+              <div class="modal-contact-button">
                 <button class="site-button feedback-button-form" type="submit">Отправить</button>
               </div>
             </form>
