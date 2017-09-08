@@ -732,9 +732,8 @@ a:active {
   background-size: cover;
 }
 
-.subsription-wrapper {
-  margin-top: 5px;
-  margin-left: 5px;
+.subscription-wrapper {
+  margin: 5px;
   width: 549px;
   min-height: 210px;
   border-radius: 9px;
