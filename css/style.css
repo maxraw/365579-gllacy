@@ -1558,6 +1558,85 @@ input[type="range"] {
   line-height: 24px;
 }
 
+.modal-basket {
+  display: block;
+  top: 55px;
+  right: 9.8%;
+  width: 576px;
+  padding: 20px 15px 20px 15px;
+}
+
+.basket-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 540px;
+}
+
+.basket-item-one {
+  position: relative;
+}
+
+.basket-item-delete {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.basket-item-delete::before,
+.basket-item-delete::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 19px;
+  height: 3px;
+
+  background-color: #d0d0d0;
+}
+
+.basket-item-delete::before {
+  transform: rotate(45deg);
+}
+
+.basket-item-delete::after {
+  transform: rotate(-45deg);
+}
+
+.basket-item-link {
+  width: 220px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.total-basket-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.total-basket-price span {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  padding-bottom: 10px
+}
+
+.buy-buttom-basket {
+  width: 170px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px #ac1000;
+  background-color: #e84d37;
+  border: none;
+}
+
 .modal-feedback-contact {
   position: fixed;
   left: 50%;
