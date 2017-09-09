@@ -239,16 +239,6 @@ a:active {
   text-indent: -9999px;
 }
 
-.search > a:hover .search-form {
-  position: absolute;
-  top: 50px;
-  width: 341px;
-  height: 44px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  background-color: #f8f7f4;
-}
-
 .search input[type="search"] {
   width: 341px;
   height: 44px;
@@ -262,6 +252,28 @@ a:active {
   border-radius: 4px;
   border: 1px solid #d3d3d2;
   background-color: #ffffff;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form form {
+  display: none;
+  position: absolute;
+  top: 0px;
+  width: 341px;
+  height: 44px;
+  padding: 20px;
+  color: #999999;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  background-color: #f8f7f4;
+}
+
+.search-form:hover form {
+  display: block;
+  top: 90px;
 }
 
 .enter-button a {
