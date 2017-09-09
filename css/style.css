@@ -239,6 +239,16 @@ a:active {
   text-indent: -9999px;
 }
 
+.search > a:hover .search-form {
+  position: absolute;
+  top: 50px;
+  width: 341px;
+  height: 44px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  background-color: #f8f7f4;
+}
+
 .search input[type="search"] {
   width: 341px;
   height: 44px;
@@ -1445,8 +1455,11 @@ input[type="range"] {
   box-shadow: inset 0 2px 2px #942718;
 }
 
+
+
 .modal {
   position: fixed;
+  margin-top: 5px;
   color: #323232;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
@@ -1487,6 +1500,12 @@ input[type="range"] {
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
+.login-action-item {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 37px;
+}
+
 .login-button {
   padding: 15px 25px 14px 25px;
   color: #fefefe;
@@ -1497,6 +1516,10 @@ input[type="range"] {
   line-height: 24px;
   box-shadow: 0 1px 2px #ac1000;
   background-color: #e84d37;
+}
+
+.restore {
+  margin-left: 15px;
 }
 
 .restore a {
@@ -1615,12 +1638,8 @@ input[type="range"] {
   font-weight: 700;
   line-height: 24px;
   padding: 14px 24px 14px 24px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  box-shadow: 0 1px 2px #ac1000;
   background-color: #e84d37;
   border: none;
   border-radius: 50px;
 }
-
-/*.modal-contact--show {
-  display: block;
-}*/
