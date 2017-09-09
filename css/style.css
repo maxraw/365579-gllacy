@@ -78,7 +78,8 @@ input[type="radio"].visually-hidden {
 
 a {
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: rgba(255, 255, 255, 0.2);
 }
 
 a:hover,
@@ -163,7 +164,7 @@ a:active {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  padding: 7px 15px;
+  padding: 6px 14px;
   box-sizing: border-box;
 }
 
