@@ -51,7 +51,34 @@
                  </form>
               </div>
             </li>
-            <li class="enter-button"><a class="login-link" href="login.html">Вход</a></li>
+            <li class="enter-button"><a class="login-link" href="login.html">Вход</a>
+              <div class="modal modal-login">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <p>
+                      <label class="visually-hidden" for="user-login">Электронная почта</label>
+                      <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Электронная почта">
+                    </p>
+                    <p>
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                    </p>
+                    <p class="login-password-info">
+                      <label class="login-checkbox">
+                        <input type="checkbox" name="remember" class="visually-hidden">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </p>
+                    </form>
+                      <div class="login-action-item">
+                        <button class="site-button login-button" type="submit">Войти</button>
+
+                  <div class="restore">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                  </div>
+              </div>
+            </li>
             <li class="basket"><a class="button basket-button" href="basket.html">Пусто</a></li>
           </ul>
           <div class="header-info">
@@ -267,32 +294,7 @@
       </footer>
 
     <!--Скрытые формы-->
-      <section class="modal modal-login">
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label class="visually-hidden" for="user-login">Электронная почта</label>
-              <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Электронная почта">
-            </p>
-            <p>
-              <label class="visually-hidden" for="user-password">Пароль</label>
-              <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
-            </p>
-            <p class="login-password-info">
-              <label class="login-checkbox">
-                <input type="checkbox" name="remember" class="visually-hidden">
-                <span class="checkbox-indicator"></span>
-              </label>
-            </p>
-            </form>
-              <div class="login-action-item">
-                <button class="site-button login-button" type="submit">Войти</button>
 
-          <div class="restore">
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
-          </div>
-          </div>
-      </section>
 
       <section class="modal modal-basket">
         <div class="basket-list">
