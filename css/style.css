@@ -69,7 +69,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-container {
-  margin-top: -7%;
+  margin-top: -11%;
 }
 
 .inner-page {
@@ -884,7 +884,7 @@ iframe {
 }
 /*Каталог*/
 .catalog {
-  margin-top: 40px;
+  margin-top: 29px;
 }
 
 .catalog-list {
@@ -897,6 +897,8 @@ iframe {
 }
 
 .catalog-page-title {
+  margin-top: 2px;
+  margin-bottom: 27px;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
@@ -915,8 +917,12 @@ iframe {
 
 .breadcrumbs li {
   list-style: none;
-  margin-right: 18px;
+  margin-right: 20px;
   vertical-align: top;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
 }
 
 .breadcrumbs-current a {
@@ -942,14 +948,14 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 865px;
+  width: 875px;
 }
 
 .filters-list-fat {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 400px;
+  width: 416px;
   height: 36px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -993,7 +999,7 @@ iframe {
   justify-content: flex-end;
   margin: 0;
   padding: 0;
-  width: 675px;
+  width: 700px;
   height: 36px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1005,7 +1011,7 @@ iframe {
 
 .filters-list-fillers li {
   position: relative;
-  padding-left: 30px;
+  padding-left: 39px;
   margin-right: 16px;
 }
 
@@ -1013,7 +1019,7 @@ iframe {
   content: "";
   position: absolute;
   top: -1px;
-  left: 0;
+  left: 6px;
   width: 22px;
   height: 22px;
   border: 2px solid rgba(255, 255, 255, 0.8);
@@ -1023,8 +1029,8 @@ iframe {
 .filter-option input[type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
-  top: -4px;
-  left: 10px;
+  top: -5px;
+  left: 18px;
   width: 10px;
   height: 20px;
   border-right: 3px solid rgba(255, 255, 255, 0.8);
@@ -1033,9 +1039,9 @@ iframe {
 }
 
 .filters input[type="submit"] {
-  width: 144px;
-  height: 33px;
-  margin-top: 20px;
+  width: 130px;
+  height: 30px;
+  margin-top: 24px;
   border-radius: 30px;
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.19);
@@ -1063,6 +1069,7 @@ iframe {
 }
 
 .filters legend {
+  margin-left: 15px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
@@ -1142,7 +1149,7 @@ input[type="range"] {
 
 .range-controls {
   position: relative;
-  width: 190px;
+  width: 185px;
   height: 4px;
   margin-top: 10px;
   background-color: rgba(248, 247, 244, 0.5);
