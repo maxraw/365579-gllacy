@@ -41,15 +41,70 @@
         </ul>
         <ul class="user-navigation">
           <li class="search">
-            <div class="search">
+            <div class="search-form">
               <a href="#" class="search__link">search</a>
                <form action="#" method="post">
-                 <input class="visually-hidden" type="search" name="search" placeholder="Что ищем?">
+                 <input type="search" type="search" name="search" placeholder="Что ищем?">
                </form>
             </div>
           </li>
-          <li class="enter-button"><a class="login-link" href="login.html">Вход</a></li>
-          <li class="basket basket-active"><a class="button basket-button basket-active-link" href="basket.html">2 товара</a></li>
+          <li class="enter-button"><a class="login-link" href="login.html">Вход</a>
+            <div class="modal modal-login">
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="user-login">Электронная почта</label>
+                    <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                  </p>
+                  <p class="login-password-info">
+                    <label class="login-checkbox">
+                      <input type="checkbox" name="remember" class="visually-hidden">
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                  </p>
+                  <div class="login-action-item">
+                    <button class="site-button login-button" type="submit">Войти</button>
+
+              <div class="restore">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
+              </div>
+             </form>
+            </div>
+          </li>
+          <li class="basket basket-active">
+            <a class="button basket-button basket-active-link" href="basket.html">2 товара</a>
+            <section class="modal modal-basket">
+              <div class="basket-list">
+                <div class="basket-item-one">
+                  <img class="basket-item-image"src="img/item-orang-mini.png" width="34" height="34" alt="Пломбир с апельсиновым джемом">
+                  <a class="basket-item-link" href="#">Пломбир с апельсиновым джемом</a>
+                  <div class="basket-item-cost">
+                    <span>1,5 кг x</span>
+                    <span class="basket-item-price">200 руб.</span>
+                  </div>
+                  <span class="price-total">300 руб.</span>
+                </div>
+                <div class="basket-item-two">
+                  <img class="basket-item-image" src="img/item-pink-mini.png" width="34" height="34" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  <a class="basket-item-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  <div class="basket-item-cost">
+                    <span>1,5 кг x</span>
+                    <span class="basket-item-price">300 руб.</span>
+                  </div>
+                  <span class="price-total">450 руб.</span>
+                </div>
+              </div>
+              <div class="total-basket-price">
+                <span>Итого: 750 руб.</span>
+                <button class="site-button buy-buttom-basket" type="submit">Оформить заказ</button>
+              </div>
+            </section>
+          </li>
         </ul>
         <div class="header-info">
           <p class="header-shedule">С 10 до 20, ежедневно</p>
@@ -315,7 +370,9 @@
               <svg class="pagination-prev" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#C1C6CE" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/></svg>
             </a>
           </li>
-          <li class="pagination-item pagination-item-current">1</li>
+          <li class="pagination-item pagination-item-current">
+            <a>1</a>
+          </li>
           <li class="pagination-item">
             <a href="#">2</a>
           </li>
@@ -407,28 +464,7 @@
           <a href="#">Новая регистрация</a>
         </div>
     </section>
-    <section class="modal modal-basket">
-      <div class="basket-list">
-        <div class="basket-item-one">
-          <img class="basket-item-image"src="img/item-orang-mini.png" width="34" height="34" alt="Пломбир с апельсиновым джемом">
-          <a class="basket-item-link" href="#">Пломбир с апельсиновым джемом</a>
-          <span>1,5 кг x</span>
-          <span class="basket-item-price">200 руб.</span>
-          <span class="price-total">300 руб.</span>
-        </div>
-        <div class="basket-item-two">
-          <img class="basket-item-image" src="img/item-pink-mini.png" width="34" height="34" alt="Клубничный пломбир с присыпкой из белого шоколада">
-          <a class="basket-item-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
-          <span>1,5 кг x</span>
-          <span class="basket-item-price">300 руб.</span>
-          <span class="price-total">450 руб.</span>
-        </div>
-      </div>
-      <div class="total-basket-price">
-        <span>Итого: 750 руб.</span>
-        <button class="site-button buy-buttom-basket" type="submit">Оформить заказ</button>
-      </div>
-    </section>
+
 
     </div>
   </div>
