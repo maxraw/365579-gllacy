@@ -47,7 +47,7 @@
               <div class="search-form">
                 <a href="#" class="search__link">search</a>
                  <form action="#" method="post">
-                   <input class="visually-hidden" type="search" name="search" placeholder="Что ищем?">
+                   <input type="search" name="search" placeholder="Что ищем?">
                  </form>
               </div>
             </li>
@@ -68,15 +68,16 @@
                         <span class="checkbox-indicator"></span>
                       </label>
                     </p>
-                    </form>
-                      <div class="login-action-item">
-                        <button class="site-button login-button" type="submit">Войти</button>
+                    <div class="login-action-item">
+                      <button class="site-button login-button" type="submit">Войти</button>
 
-                  <div class="restore">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </div>
-                  </div>
+                <div class="restore">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
+                </div>
+                    </form>
+
               </div>
             </li>
             <li class="basket"><a class="button basket-button" href="basket.html">Пусто</a></li>
@@ -246,54 +247,7 @@
 
       </section>
     </div>
-    <script>
-      var link = document.querySelector(".feedback-button");
 
-      var popur = document.querySelector(".modal-feedback");
-      var close = popup.querySelector(".modal-contact-close");
-      var form = popup.querySelector("form");
-      var name = popup.querySelector("[name=name]");
-      var email = popur.querySelector("[name=email]");
-      var storage = localStorage.getItem("name");
-
-      link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-      if (storage) {
-         name.value = storage;
-         email.focus();
-       } else {
-         name.focus();
-       }
-  });
-
-  close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-  });
-
-  form.addEventListener("submit", function (evt) {
-    if (!name.value || !email.value) {
-      evt.preventDefault();
-      popup.classList.remove("modal-error");
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add("modal-error");
-    } else {
-      localStorage.setItem("name", name.value);
-    }
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      }
-    }
-  });
-    </script>
     <div class="content-wrapper">
       <footer>
       <div class="main-footer">
@@ -342,33 +296,11 @@
       </footer>
 
     <!--Скрытые формы-->
-
-
-      <section class="modal modal-basket">
-        <div class="basket-list">
-          <div class="basket-item-one">
-            <a class="basket-item-one" href="#">Плоимбир с апельсиновым джемом</a>
-            <span>1,5 кг x</span>
-            <span class="basket-item-price">200 руб.</span>
-            <span class="price-total">300 руб.</span>
-          </div>
-          <div class="basket-item-two">
-            <a class="basket-item-one" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
-            <span>1,5 кг x</span>
-            <span class="basket-item-price">300 руб.</span>
-            <span class="price-total">450 руб.</span>
-          </div>
-        </div>
-        <div class="total-basket-price">
-          <span>Итого: 750 руб.</span>
-        </div>
-        <button class="site-button login-basket" type="submit">Оформить заказ</button>
-      </section>
-      <section class="modal-feedback">
+     <section class="modal-feedback">
         <div class="modal-feedback-contact">
-            <button class="modal-contact-close" type="button">Назад</button>
             <h2 class="feedback-caption">Мы обязательно вам ответим!</h2>
             <form class="modal-contact-form" action="https://echo.htmlacademy.ru" method="post">
+              <button class="modal-contact-close" type="button">x</button>
               <div class="field">
                 <label class="visually-hidden feedback-label" for="contact-name">Как вас зовут?</label>
                 <input class="modal-feedback-item feedback-field" type="text" name="name" id="contact-name" placeholder="Как вас зовут?" required>
@@ -387,6 +319,21 @@
             </form>
           </div>
       </section>
+      <script>
+      var openForm = document.querySelector('.feedback-button');
+      var closeForm = document.querySelector('.modal-contact-close');
+      var mainForm = document.querySelector('.modal-feedback-contact');
+
+      openForm.addEventListener('click', function(e) {
+      e.preventDefault();
+      mainForm.classList.add('active-form');
+      })
+
+      closeForm.addEventListener('click', function(e) {
+      e.preventDefault();
+      mainForm.classList.remove('active-form');
+      })
+    </script>
     </div>
   </div>
   </body>

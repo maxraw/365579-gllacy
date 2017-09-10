@@ -617,7 +617,7 @@ a:active {
 
 .main-lead {
   margin: 0;
-  margin-top: -20px;
+  margin-top: -4%;
   background-image: url("../img/wafer-background.jpg");
   background-repeat: repeat;
   border-radius: 15px;
@@ -1556,13 +1556,14 @@ input[type="range"] {
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
+  text-align: start;
 }
-
+/*Корзина*/
 .modal-basket {
   display: block;
   top: 55px;
   right: 9.8%;
-  width: 576px;
+  width: 540px;
   padding: 20px 15px 20px 15px;
 }
 
@@ -1573,45 +1574,52 @@ input[type="range"] {
   width: 540px;
 }
 
-.basket-item-one {
+.basket-item-one,
+.basket-item-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-}
-
-.basket-item-delete {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  font-size: 0;
-  border: 0;
-  cursor: pointer;
-  background-color: inherit;
-}
-
-.basket-item-delete::before,
-.basket-item-delete::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: -10px;
-  width: 19px;
-  height: 3px;
-
-  background-color: #d0d0d0;
-}
-
-.basket-item-delete::before {
-  transform: rotate(45deg);
-}
-
-.basket-item-delete::after {
-  transform: rotate(-45deg);
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 .basket-item-link {
   width: 220px;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
+  height: 12px;
+  color: #323232;
+}
+
+.basket-item-one::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.basket-item-two::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.basket-list img {
+  padding-left: 20px;
+  margin-right: -23px;
 }
 
 .total-basket-price {
@@ -1636,65 +1644,21 @@ input[type="range"] {
   background-color: #e84d37;
   border: none;
 }
+/*корзина*/
 
-@keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
-
-.modal-show {
-  display: block;
-  animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
-}
-
-.modal-feedback-contact {
+.modal-feedback {
   position: fixed;
   left: 50%;
   top: 50%;
+}
+
+.modal-feedback-contact {
+  position: relative;
   display: none;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 10;
+  /*z-index: 10;*/
   width: 425px;
   min-height: 390px;
   padding: 13px 25px 25px 25px;
@@ -1704,18 +1668,14 @@ input[type="range"] {
 
 .modal-contact-close {
   position: absolute;
-  width: 26px;
-  height: 26px;
-  display: block;
-  font-size: 0;
+  top: 0;
+  right: 0;
   border: none;
-  outline: none;
-  background-color: transparent;
-  right: 10px;
-  top: 10px;
+  background-color: inherit;
+  font-size: 25px;
 }
 
-.modal-contact-close:before,
+/*.modal-contact-close:before,
 .modal-contact-close:after {
   content: "";
   position: absolute;
@@ -1737,7 +1697,7 @@ input[type="range"] {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
-}
+}*/
 
 .feedback-caption {
   margin: 0;
@@ -1799,4 +1759,8 @@ input[type="range"] {
   background-color: #e84d37;
   border: none;
   border-radius: 50px;
+}
+
+.active-form {
+  display: block;
 }
