@@ -183,7 +183,7 @@ a:active {
   box-sizing: border-box;
 }
 
-.user-navigation a {
+.user-button {
   color: #ffffff;
   text-align: center;
   display: block;
@@ -280,7 +280,6 @@ a:active {
 }
 
 .login-link {
-  content: "";
   background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
   background-position: 16px 6px;
@@ -294,7 +293,6 @@ a:active {
 
 .login-link:hover,
 .login-link:focus {
-  content: "";
   text-decoration: none;
   background-image: url("../img/entrance_black.svg");
   background-repeat: no-repeat;
@@ -306,8 +304,7 @@ a:active {
   box-sizing: border-box;
 }
 
-.basket a {
-  content: "";
+.basket-button {
   background-image: url("../img/basket.svg");
   background-repeat: no-repeat;
   background-position: 16px 6px;
@@ -318,7 +315,7 @@ a:active {
   font-weight: 500;
 }
 
-.basket-active a {
+.basket-active-link {
   padding-left: 25px;
   background-image: url("../img/basket-red.svg");
   background-repeat: no-repeat;
@@ -330,8 +327,8 @@ a:active {
   font-weight: 500;
 }
 
-.basket a:hover,
-.basket a:focus {
+.basket-button:hover,
+.basket-button:focus {
   content: "";
   background-image: url("../img/basket_black.svg");
   background-repeat: no-repeat;
@@ -342,8 +339,8 @@ a:active {
   height: 32px;
 }
 
-.basket-active a:hover,
-.basket-active a:focus {
+.basket-active-link:hover,
+.basket-active-link:focus {
   content: "";
   background-image: url("../img/basket-red.svg");
   background-repeat: no-repeat;
@@ -354,15 +351,15 @@ a:active {
   height: 32px;
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-button:hover,
+.user-button:focus {
   color: #000000;
   background-color: #f8f7f4;
   border-radius: 100px;
 }
 
 .site-navigation a:active,
-.user-navigation a:active {
+.user-button:active {
   box-shadow: inset 0 2px 1px #696969;
   background-color: #ededed;
   background-color: rgba(248, 247, 244, 0.99);
@@ -1419,7 +1416,7 @@ input[type="range"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .benefits-list li {
@@ -1574,7 +1571,7 @@ input[type="range"] {
   display: none;
   top: 55px;
   right: 9.8%;
-  width: 500px;
+  width: 540px;
   min-height: 280px;
   padding: 20px 15px 20px 15px;
   box-sizing: border-box;
@@ -1589,7 +1586,7 @@ input[type="range"] {
 .basket-products_item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .last-child {
@@ -1601,16 +1598,21 @@ input[type="range"] {
   font-size: 13px;
   color: #231f20;
   margin-top: 10px;
+  margin-right: 15px;
 }
 
 .basket-products_delete {
+  background-color: #f8f7f4;
   background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 11px;
   border: none;
 }
 
 .basket-products_photo {
   width: 34px;
   height: 34px;
+  margin-left: -5px;
 }
 
 .basket-item-link {
@@ -1629,11 +1631,11 @@ input[type="range"] {
 
 .total-basket-price {
   display: flex;
-  width: 500px;
+  width: 513px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 9px;
+  margin-top: -15px;
 }
 
 .total-basket-price span {
