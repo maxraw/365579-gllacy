@@ -576,7 +576,8 @@ a:active {
   width: 165px;
   margin-top: 45px;
   margin-left: 11px;
-  padding-right: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -589,13 +590,18 @@ a:active {
   float: right;
   width: 189px;
   margin-top: 45px;
-  padding-right: 11px;
-  padding: 11px;
+  padding: 10px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
   border-radius: 50px;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 /*Конец промо*/
