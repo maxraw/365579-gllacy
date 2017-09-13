@@ -21,15 +21,12 @@ body > input[type="radio"] {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -69,7 +66,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-container {
-  margin-top: -11%;
+  margin-top: 24%;
 }
 
 .inner-page {
@@ -88,12 +85,33 @@ a:active {
 }
 
 .main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header-logo {
+  display: block;
+  width: 154px;
+  height: 64px;
+  margin-top: 10px;
+  margin-right: 12px;
+}
+
+/*.main-navigation {
   margin: 0;
   padding: 0;
   padding-top: 6px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  max-height: 64px;
 }
 
 .site-navigation {
@@ -116,6 +134,9 @@ a:active {
 
 .user-navigation {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   flex-direction: row;
   justify-content: flex-end;
   flex-grow: 2;
@@ -153,8 +174,8 @@ a:active {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
+}*/
+/*
 .site-navigation a {
   display: block;
   list-style: none;
@@ -166,8 +187,8 @@ a:active {
   font-weight: 700;
   padding: 6px 14px;
   box-sizing: border-box;
-}
-
+}*/
+/*
 .login-link {
   position: relative;
   padding-left: 44px;
@@ -213,9 +234,12 @@ a:active {
 .search {
   width: 32px;
   position: relative;
+  padding: 5px;
+  padding-right: 0;
+  border-radius: 50%;
 }
 
-.search a {
+.search__link {
   content: "";
   background-image: url("../img/loupe.svg");
   background-repeat: no-repeat;
@@ -227,8 +251,8 @@ a:active {
   text-indent: -9999px;
 }
 
-.search a:hover,
-.search a:focus {
+.search__link:hover,
+.search__link:focus {
   content: "";
   background-image: url("../img/loupe_black.svg");
   background-repeat: no-repeat;
@@ -247,7 +271,8 @@ a:active {
 .search-form form {
   display: none;
   position: absolute;
-  top: 0px;
+  top: 40px;
+  right: 1px;
   width: 341px;
   height: 44px;
   padding: 20px;
